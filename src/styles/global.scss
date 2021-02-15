@@ -1,0 +1,125 @@
+@import "./modularscale";
+
+/* Reset */
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+$modularscale: (
+  base: 16px 33px,
+  320px: (
+    ratio: 1.236,
+  ),
+  1280px: (
+    ratio: 1.618,
+  ),
+);
+
+$line-height: 1.3rem;
+
+html {
+  @include ms-respond(font-size, 1);
+  line-height: $line-height;
+  margin: 0 auto;
+  max-width: 35rem;
+  padding: $line-height;
+}
+
+body,
+.article {
+  @include ms-respond(font-size, 1);
+  line-height: $line-height;
+}
+
+h5,
+.h5 {
+  @include ms-respond(font-size, 2);
+  line-height: $line-height;
+  margin-top: calc(#{$line-height} / 4 * 3);
+  margin-bottom: $line-height / 4;
+}
+
+h4,
+.h4 {
+  @include ms-respond(font-size, 3);
+  line-height: $line-height;
+  margin-top: calc(#{$line-height} / 4 * 3);
+  margin-bottom: $line-height / 4;
+}
+
+h3,
+.h3 {
+  @include ms-respond(font-size, 4);
+  line-height: $line-height;
+  margin-top: calc(#{$line-height} / 4 * 3);
+  margin-bottom: $line-height / 4;
+}
+
+h2,
+.h2 {
+  @include ms-respond(font-size, 5);
+  line-height: $line-height * 2;
+  margin-top: calc(#{$line-height} / 4 * 3);
+  margin-bottom: $line-height / 4;
+}
+
+h1,
+.h1 {
+  @include ms-respond(font-size, 6);
+  line-height: $line-height * 2;
+  margin-top: calc(#{$line-height} / 4 * 3);
+  margin-bottom: $line-height / 4;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0rem;
+  margin-bottom: $line-height;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
