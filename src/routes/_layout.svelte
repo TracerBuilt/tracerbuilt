@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import Nav from "../components/Nav.svelte";
 
   export let segment: string;
@@ -10,6 +10,6 @@
   <slot />
 </main>
 
-<style lang="scss" global>
+<style global>
   @import "../styles/global.scss";
 </style>

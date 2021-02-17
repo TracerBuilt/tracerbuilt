@@ -6,10 +6,6 @@
 </svelte:head>
 
 <h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer metus quam,
@@ -20,7 +16,7 @@
   habitasse platea dictumst. Proin id magna in urna molestie efficitur. Maecenas
   condimentum ante ut turpis placerat posuere.
 </p>
-
+<h2>Heading 2</h2>
 <p>
   Duis non euismod odio. Sed congue hendrerit mi, tempor mollis diam porttitor
   a. Vivamus in justo vitae erat consectetur aliquam eu ac quam. Nam eget
@@ -29,7 +25,7 @@
   sagittis augue odio, vel convallis arcu euismod ut. In blandit pharetra
   ullamcorper.
 </p>
-
+<h3>Heading 3</h3>
 <p>
   Fusce placerat, quam eu dignissim dapibus, turpis lorem ornare erat, eu
   vulputate ligula lectus vitae diam. Nulla facilisi. Suspendisse quis turpis
@@ -40,6 +36,7 @@
   elit finibus sollicitudin. Nunc id felis id est porta consectetur. Suspendisse
   non sem facilisis, ultrices magna nec, semper arcu.
 </p>
+<h4>Heading 4</h4>
 
 <p>
   Nam elementum sodales euismod. In hac habitasse platea dictumst. Donec erat
@@ -48,6 +45,7 @@
   sit amet enim. In varius nunc in lectus commodo, in fermentum mauris
   fringilla. Mauris auctor bibendum quam, eget iaculis erat scelerisque et.
 </p>
+<h5>Heading 5</h5>
 
 <p>
   Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
@@ -62,7 +60,7 @@
   Quisque ut pretium leo.
 </p>
 
-<style lang="scss">
+<style>
   @import "../styles/global.scss";
   .line {
     @include ms-respond(width, 9);
