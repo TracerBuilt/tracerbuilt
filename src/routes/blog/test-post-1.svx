@@ -1,0 +1,65 @@
+---
+title: 'A post to test mdsvex'
+outline: 'A testacular test for testing purposes'
+tags: ['test', 'also test']
+---
+
+# Heading 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada enim in purus lobortis lobortis. Curabitur id cursus erat. Sed justo quam, hendrerit in neque eget, suscipit rhoncus tortor. Donec aliquam lorem in lorem hendrerit finibus. Nam commodo finibus lacus, non varius dolor hendrerit eget. Nunc in ultricies neque, id congue erat. In laoreet malesuada mi, ac rhoncus elit fringilla ac. Sed nunc ex, hendrerit id sem at, ultrices consectetur urna. Vivamus eros neque, posuere at volutpat vitae, gravida sed urna.
+
+## Heading 2
+
+Aenean porta sagittis ligula et lobortis. Maecenas sed erat in lacus interdum placerat. Suspendisse nulla libero, ultricies vel sodales in, vehicula sed lacus. Nunc dapibus ultricies purus, ut convallis ipsum pellentesque eget. Proin quis nibh ut risus consectetur molestie. Pellentesque sed facilisis turpis. Integer sodales mauris tortor, ac sagittis urna mattis id. Sed rutrum, dolor molestie vestibulum porta, diam arcu auctor ipsum, nec rhoncus mi metus sit amet lorem. Nulla scelerisque eleifend orci, at faucibus quam semper et. Nunc semper pretium eros sit amet auctor. Duis ultricies risus ac neque interdum, a tincidunt dui feugiat. Nunc ante lorem, commodo eget fermentum sed, tristique non nulla. Sed nibh lorem, dapibus eu dapibus nec, sodales sit amet augue. Morbi ornare, quam at maximus luctus, justo justo eleifend neque, iaculis facilisis augue orci egestas ante. Vestibulum viverra rhoncus urna, vel imperdiet nibh vehicula at.
+
+### Heading 3
+
+Curabitur augue diam, rutrum a tincidunt in, sollicitudin sit amet eros. Sed metus diam, ornare vel ullamcorper id, feugiat at purus. Etiam molestie dui sit amet blandit dignissim. Praesent tellus lorem, tristique at justo quis, gravida tempus ante. Nunc in felis sed ante vulputate porta eu id est. Quisque id enim ornare, elementum erat tincidunt, feugiat arcu. Ut et neque sit amet neque fermentum tincidunt tempor at quam. Aenean efficitur eros id leo sagittis, ut lobortis augue sagittis. Proin sagittis euismod odio scelerisque fringilla. Sed neque magna, congue a orci id, commodo pretium justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc tortor dui, lobortis at bibendum et, rutrum id felis.
+
+#### Heading 4
+
+Nulla congue vitae dui eget placerat. Nulla vel tellus finibus, pharetra nunc id, consectetur urna. Donec vehicula commodo vulputate. Vivamus ornare ante libero, in sodales dolor vestibulum nec. In commodo gravida lorem non commodo. Fusce nunc tellus, elementum sit amet tincidunt mollis, lobortis a tellus. Nunc sit amet felis at lectus rutrum viverra quis sed magna. Nunc auctor metus id placerat maximus. Praesent nec lectus nulla. Quisque vel turpis vel velit ullamcorper auctor sit amet id urna. Cras eleifend consectetur tortor, a malesuada magna gravida in. In gravida justo eu varius rutrum. Integer gravida, lacus eget efficitur tincidunt, orci dolor euismod dui, pulvinar dictum tortor eros vel erat. Maecenas at eleifend turpis, nec tristique nulla. Curabitur vel mattis orci. Aenean interdum mi ut risus laoreet semper.
+
+##### Heading 5
+
+Mauris consequat porta varius. Vivamus accumsan mi in erat consectetur fermentum. Mauris non ex et neque feugiat maximus. Duis tempus ante sit amet sapien congue, at euismod ligula posuere. Sed pellentesque eros eros, vitae laoreet quam interdum at. Sed tempus enim egestas tortor placerat laoreet. Vestibulum viverra tortor quis lacinia gravida. Duis rutrum nec metus eget scelerisque. Sed cursus quam non laoreet facilisis. Integer tincidunt faucibus ornare.
+
+```typescript
+let current_token: {}
+
+async function handle_submit(e: Event) {
+	const token = (current_token = {})
+
+	e.preventDefault()
+
+	const body = new FormData(form)
+
+	if (pending) pending(body, form)
+
+	try {
+		const res = await fetch(form.action, {
+			method: form.method,
+			headers: {
+				accept: 'application/json'
+			},
+			body
+		})
+
+		if (token !== current_token) return
+
+		if (res.ok) {
+			result(res, form)
+		} else if (error) {
+			error(res, null, form)
+		} else {
+			console.error(await res.text())
+		}
+	} catch (e) {
+		if (error) {
+			error(null, e, form)
+		} else {
+			throw e
+		}
+	}
+}
+```

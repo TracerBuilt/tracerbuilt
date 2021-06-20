@@ -1,0 +1,134 @@
+@import '/node_modules/@fontsource/eb-garamond/400.css';
+@import '/node_modules/@fontsource/eb-garamond/variable.css';
+@import '/node_modules/@fontsource/eb-garamond/variable-italic.css';
+@import '/node_modules/@fontsource/cabin/400.css';
+@import '/node_modules/@fontsource/cabin/variable-full.css';
+@import '/node_modules/@fontsource/fira-code/400.css';
+@import '/node_modules/@fontsource/fira-code/variable.css';
+
+:root {
+	--serif: 'EB Garamond', serif;
+	--sans: 'Cabin', sans-serif;
+	--mono: 'Fira Code', mono;
+
+	@supports (font-variation-settings: normal) {
+		--serif: 'EB GaramondVariable', serif;
+		--sans: 'CabinVariable', sans-serif;
+		--mono: 'Fira CodeVariable', mono;
+	}
+}
+
+html,
+.root {
+	font-size: 100%;
+	font-size: var(--size-0);
+	font-weight: normal;
+	line-height: var(--step-1);
+}
+
+body,
+.article {
+	font-family: var(--serif);
+	font-size: var(--size-0);
+	line-height: var(--step-1);
+	margin: auto;
+	max-width: 66ch;
+}
+h5,
+.h5 {
+	font-family: var(--sans);
+	font-size: var(--size-0);
+	font-weight: normal;
+	line-height: var(--step-1);
+	margin: var(--step-seven-eighths) 0 var(--step-eighth);
+}
+
+h4,
+.h4 {
+	font-family: var(--sans);
+	font-size: var(--size-0);
+	font-weight: 600;
+	line-height: var(--step-1);
+	margin: var(--step-seven-eighths) 0 var(--step-eighth);
+}
+
+h3,
+.h3 {
+	font-family: var(--serif);
+	font-size: var(--size-1);
+	font-weight: normal;
+	line-height: calc(var(--step-1) * 1.5);
+	margin: var(--step-three-eighths) 0 var(--step-eighth);
+}
+
+h2,
+.h2 {
+	font-family: var(--serif);
+	font-size: var(--size-2);
+	font-weight: normal;
+	line-height: calc(var(--step-1) * 1.5);
+	margin: var(--step-three-eighths) 0 var(--step-eighth);
+}
+
+h1,
+.h1 {
+	font-family: var(--serif);
+	font-size: var(--size-3);
+	font-weight: normal;
+	line-height: calc(var(--step-1) * 1.5);
+	margin: 0 0 var(--step-half);
+}
+
+small,
+.small {
+	font-size: var(--size--1);
+}
+
+code {
+	font-family: var(--mono);
+	font-size: var(--size--1);
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+	margin-bottom: var(--step-1);
+	margin-top: 0rem; /* stylelint-disable-line length-zero-no-unit */
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0rem; /* stylelint-disable-line length-zero-no-unit */
+	margin-top: 0rem; /* stylelint-disable-line length-zero-no-unit */
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+	border: 1px solid;
+	margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small {
+	line-height: 0;
+}
+sub,
+sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
