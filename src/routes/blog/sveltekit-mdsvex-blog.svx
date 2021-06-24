@@ -1,0 +1,162 @@
+---
+title: 'A Shiny SvelteKit Blog'
+outline: 'Creating a simple markdown blog with SvelteKit, Typescript, PostCSS, and mdsvex'
+tags: ['Svelte', 'SvelteKit', 'Typescript', 'mdsvex', 'PostCSS', 'Markdown']
+published: '6-20-21'
+---
+
+# {title}
+
+This post will cover a fast and simple way to set up a basic blog using SvelteKit. The first step is to create a new SvelteKit app, following the instructions from [their documentation](https://kit.svelte.dev/docs#introduction-getting-started), let's start with:
+
+```bash
+npm init svelte@next shiny-blog
+```
+
+You will be prompted with a few options during the process. For the purposes of following along with me, select the `SvelteKit demo app` option, as well as enabling TypeScript. The ESLint and Prettier options are up to you, but I would definitely recommend both.
+
+After this finishes (it really shouldn't take more than a few seconds), enter the following commands in your terminal:
+
+```bash
+cd shiny-blog
+pnpm install
+pnpm run dev
+```
+
+By now you've spun up a development server with a fresh SvelteKit site, you can should be able to see if by hitting `localhost:3000` in your browser. Not much to look at just yet, but check out that counter! Plus, Svelte and TypeScript are already set up for us out-of-the-box, which is most excellent. It's like we're halfway there already!
+
+## Setting up PostCSS
+
+This is just about the easiest part of this whole process, thanks to [Svelte Add](https://github.com/svelte-add/svelte-add). Make sure you're still in your site's directory in your terminal, and type:
+
+```bash
+pnpx svelte-add postcss
+```
+
+And that's it! PostCSS is all set up, although if you have other plugins you'd like to use besides autoprefixer and cssnano, you'll need to make some modifications to the newly created `postcss.config.cjs` file in the root directory of your site. For the purposes of this guide, we're going to add a few, just to see how it works. Let's go back to the terminal and run:
+
+```bash
+pnpm i -D postcss-custom-properties postcss-nesting postcss-normalize stylelint
+```
+
+Then, we'll add them into the plugin configuration in our `postcss.config.cjs`, it should end up looking like this:
+
+```js
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
+const customProperties = require('postcss-custom-properties')
+const nesting = require('postcss-nesting')
+const normalize = require('postcss-normalize')
+const stylelint = require('stylelint')
+
+const mode = process.env.NODE_ENV
+const dev = mode === 'development'
+
+const config = {
+	plugins: [
+		stylelint(),
+		normalize(),
+		customProperties(),
+		nesting(),
+		autoprefixer(),
+
+		!dev &&
+			cssnano({
+				preset: 'default'
+			})
+	]
+}
+
+module.exports = config
+```
+
+Svelte Add handles the rest of the configuration, so now we can jump straight into implementing Markdown.
+
+## Adding Markdown Support with mdsvex
+
+First things first, we'll need to grab a copy of [mdsvex](https://mdsvex.com/), an excellent markdown preprocessor that allows you to write Svelte code in your Markdown files, and to use those files as Svelte components as well. I find this a lot simpler and easier than your usual smattering of tools like `gray-matter` or `marked` (not that these aren't great at what they do). Head back to the terminal and type this:
+
+```bash
+pnpm i -D mdsvex
+touch mdsvex.config.js
+```
+
+### Configuring mdsvex
+
+Now we'll go back to our text editor and add some stuff to our newly created `mdsvex.config.js` file. The bare minimum we need for this to work is:
+
+```js
+const config = {
+	extensions: ['.svx', '.md']
+}
+
+export default config
+```
+
+This will tell mdsvex which file extensions we want to use, and we'll be sticking with the standard (for mdsvex) `.svx` and `.md` extensions. This is also where you'll add any other configuration options you'd like for mdsvex, which if you're like me, includes some fancy-ing up of the typography:
+
+```js
+const config = {
+	extensions: ['.svx', '.md'],
+	smartypants: {
+		quotes: true,
+		ellipses: true,
+		backticks: false,
+		dashes: 'oldschool'
+	}
+}
+
+export default config
+```
+
+`smartypants` is a collection of options for things _everyone_ should be using, like real typographer's quotes, ellipses characters, and em- and en-dashes.
+
+### Configuring SvelteKit
+
+Next we'll need to tell SvelteKit to us mdsvex to process our Markdown files, so open up `svelte.config.js` in your text editor. It should look something like this:
+
+```js
+import preprocess from 'svelte-preprocess'
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: [
+		preprocess({
+			postcss: true
+		})
+	],
+
+	kit: {
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte'
+	}
+}
+
+export default config
+```
+
+We need to add a few imports at the top:
+
+```js
+import { mdsvex } from 'mdsvex'
+import mdsvexConfig from './mdsvex.config.js'
+```
+
+and a few things to the config itself:
+
+```js
+extensions: ['.svelte', ...mdsvexConfig.extensions],
+```
+
+and
+
+```js
+preprocess: [
+   mdsvex(mdsvexConfig),
+   preprocess({
+        "postcss": true
+    })
+],
+```
