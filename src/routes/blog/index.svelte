@@ -1,8 +1,8 @@
 <script context="module">
-	const posts = import.meta.glob('./*.svx')
+	const getPosts = import.meta.glob('./*.svx')
 	let body = []
-	for (const path in posts) {
-		const post = posts[path]().then(({ metadata }) => {
+	for (const path in getPosts) {
+		const post = getPosts[path]().then(({ metadata }) => {
 			return { ...metadata, slug: path.replace('.svx', '') }
 		})
 		body.push(post)
@@ -24,7 +24,6 @@
 
 <script>
 	export let posts
-
 </script>
 
 <ul>

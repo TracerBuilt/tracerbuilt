@@ -21,67 +21,65 @@
 html,
 .root {
 	font-size: 100%;
-	font-size: var(--size-0);
+	font-size: var(--step-0);
 	font-weight: normal;
-	line-height: var(--step-1);
 }
 
 body,
 .article {
 	font-family: var(--serif);
-	font-size: var(--size-0);
-	line-height: var(--step-1);
-	margin: auto;
-	max-width: 66ch;
+	font-size: var(--step-0);
+	line-height: var(--space-0);
 }
+
 h5,
 .h5 {
+	margin: var(--space--2) 0 var(--space--6);
 	font-family: var(--sans);
-	font-size: var(--size-0);
+	font-size: var(--step-0);
 	font-weight: normal;
-	line-height: var(--step-1);
-	margin: var(--step-seven-eighths) 0 var(--step-eighth);
+	line-height: var(--space-0);
 }
 
 h4,
 .h4 {
+	margin: var(--space--2) 0 var(--space--6);
 	font-family: var(--sans);
-	font-size: var(--size-0);
-	font-weight: 600;
-	line-height: var(--step-1);
-	margin: var(--step-seven-eighths) 0 var(--step-eighth);
+	font-size: var(--step-1);
+	font-weight: normal;
+	line-height: var(--space-0);
 }
 
 h3,
 .h3 {
-	font-family: var(--serif);
-	font-size: var(--size-1);
+	margin: var(--space--2) 0 var(--space--6);
+	font-family: var(--sans);
+	font-size: var(--step-2);
 	font-weight: normal;
-	line-height: calc(var(--step-1) * 1.5);
-	margin: var(--step-three-eighths) 0 var(--step-eighth);
+	line-height: var(--space-0);
 }
 
 h2,
 .h2 {
-	font-family: var(--serif);
-	font-size: var(--size-2);
+	margin: var(--space-0) 0 var(--space--4);
+	font-family: var(--sans);
+	font-size: var(--step-3);
 	font-weight: normal;
-	line-height: calc(var(--step-1) * 1.5);
-	margin: var(--step-three-eighths) 0 var(--step-eighth);
+	line-height: var(--space-1);
 }
 
 h1,
 .h1 {
-	font-family: var(--serif);
-	font-size: var(--size-3);
+	margin: var(--space-0) 0 var(--space--4);
+	font-family: var(--sans);
+	font-size: var(--step-4);
 	font-weight: normal;
-	line-height: calc(var(--step-1) * 1.5);
-	margin: 0 0 var(--step-half);
+	line-height: var(--space-1);
 }
 
 small,
 .small {
-	font-size: var(--size--1);
+	font-size: var(--step--1);
 }
 
 p + pre code {
@@ -90,7 +88,7 @@ p + pre code {
 
 code {
 	font-family: var(--mono);
-	font-size: var(--size--1);
+	font-size: var(--step--1);
 }
 
 p,
@@ -99,15 +97,15 @@ ol,
 pre,
 table,
 blockquote {
+	margin-top: 0rem;
 	margin-bottom: var(--step-1);
-	margin-top: 0rem; /* stylelint-disable-line length-zero-no-unit */
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-	margin-bottom: 0rem; /* stylelint-disable-line length-zero-no-unit */
-	margin-top: 0rem; /* stylelint-disable-line length-zero-no-unit */
+	margin-top: 0rem;
+	margin-bottom: 0rem;
 }
 
 /* Let's make sure all's aligned */
@@ -126,8 +124,8 @@ small {
 }
 sub,
 sup {
-	line-height: 0;
 	position: relative;
+	line-height: 0;
 	vertical-align: baseline;
 }
 sup {

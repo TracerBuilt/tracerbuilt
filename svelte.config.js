@@ -11,11 +11,8 @@ const config = {
 	preprocess: [
 		mdsvex(mdsvexConfig),
 		preprocess({
-			defaults: {
-				script: 'typescript',
-				style: 'postcss'
-			},
-			postcss: true
+			postcss: true,
+			scss: true
 		})
 	],
 

@@ -1,4 +1,0 @@
-{
-  "extends": [ "stylelint-config-prettier"],
-  "indentation": "tab"
-}

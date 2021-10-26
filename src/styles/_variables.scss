@@ -1,0 +1,28 @@
+:root {
+	--step--2: clamp(0.79rem, 0.79rem + 0.02vw, 0.8rem);
+	--step--1: clamp(0.89rem, 0.85rem + 0.22vw, 1rem);
+	--step-0: clamp(1rem, 0.9rem + 0.49vw, 1.25rem);
+	--step-1: clamp(1.13rem, 0.95rem + 0.85vw, 1.56rem);
+	--step-2: clamp(1.27rem, 1rem + 1.34vw, 1.95rem);
+	--step-3: clamp(1.42rem, 1.03rem + 1.99vw, 2.44rem);
+	--step-4: clamp(1.6rem, 1.04rem + 2.83vw, 3.05rem);
+	--step-5: clamp(1.8rem, 1.02rem + 3.93vw, 3.82rem);
+
+	--baseline: 1.5;
+	--space-0: calc(var(--baseline) * 1rem);
+
+	--space--7: calc(var(--space-0) * (1 / 8));
+	--space--6: calc(var(--space-0) * (1 / 4));
+	--space--5: calc(var(--space-0) * (3 / 8));
+	--space--4: calc(var(--space-0) * (1 / 2));
+	--space--3: calc(var(--space-0) * (5 / 8));
+	--space--2: calc(var(--space-0) * (3 / 4));
+	--space--1: calc(var(--space-0) * (7 / 8));
+	--space-1: calc(var(--space-0) * 1.5);
+	--space-2: calc(var(--space-0) * 2);
+	--space-3: calc(var(--space-0) * 3);
+	--space-4: calc(var(--space-0) * 4);
+	--space-5: calc(var(--space-0) * 5);
+	--space-8: calc(var(--space-0) * 6);
+	--space-9: calc(var(--space-0) * 7);
+}
