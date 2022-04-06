@@ -8,10 +8,11 @@
 </script>
 
 <Header bind:open={navOpen} />
+<Sidebar bind:open={navOpen} />
 <main>
-	<Sidebar bind:open={navOpen} />
 	<slot />
 </main>
+<div class="sidebar-right" />
 <Footer />
 
 <style lang="scss">
@@ -23,19 +24,22 @@
 
 	:global(#svelte) {
 		position: relative;
-		display: flex;
+		display: grid;
 		width: 100%;
 		height: 100%;
-		flex-direction: column;
 		background: var(--white);
+		grid-template-columns: minmax(3px, 1fr) minmax(10px, 4fr) minmax(3px, 1fr);
+		grid-template-rows: auto 1fr auto;
 	}
 
 	main {
-		position: relative;
-		display: flex;
-		width: 100%;
-		justify-content: center;
 		padding: var(--space--7);
-		margin: var(--space-0) auto 0;
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+
+	.sidebar-right {
+		grid-column: 3 / 4;
+		grid-row: 2 / 3;
 	}
 </style>

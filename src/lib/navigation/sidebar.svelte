@@ -9,6 +9,10 @@
 		{ path: '/#projects', text: 'Projects' },
 		{ path: '/blog', text: 'Blog' }
 	]
+
+	$: if (windowWidth >= 960) {
+		open = false
+	}
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -17,17 +21,21 @@
 		<ul>
 			{#each routes as route, i}
 				<li in:fly={{ duration: 300, x: -200, delay: (i + 1) * 100 }}>
-					<a href={route.path} on:click={() => (open = false)}>{route.text}</a>
+					<div class="hover-wrapper">
+						<a href={route.path} on:click={() => (open = false)}
+							>{#each route.text as letter, j}<span
+									class="letter"
+									style="animation-delay: {j / 20}s;">{letter}</span
+								>{/each}</a
+						>
+					</div>
 				</li>
 			{/each}
-			<li in:fly={{ duration: 300, x: -200, delay: 400 }}>
+			<li class="image" in:fly={{ duration: 300, x: -200, delay: 400 }}>
 				<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a>
 			</li>
-			<li in:fly={{ duration: 300, x: -200, delay: 500 }}>
-				<a href="https://github.com/TracerBuilt"><img src="/icons/twitter.svg" alt="Twitter" /></a>
-			</li>
-			<li in:fly={{ duration: 300, x: -200, delay: 600 }}>
-				<a href="https://github.com/TracerBuilt"><img src="/icons/linkedin.svg" alt="LinkedIn" /></a
+			<li class="image" in:fly={{ duration: 300, x: -200, delay: 500 }}>
+				<a href="https://twitter.com/Tracer_Built"><img src="/icons/twitter.svg" alt="Twitter" /></a
 				>
 			</li>
 		</ul>
@@ -35,51 +43,117 @@
 {/if}
 
 <style lang="scss">
-	.sidebar {
-		background-color: var(--white);
-
-		&.open {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-
-			ul {
-				text-align: left;
-				padding: 0 0 0 var(--space--4);
-			}
-			a {
-				font-size: var(--step-4);
-			}
-			li {
-				margin: var(--space-0) 0;
-			}
-			img {
-				width: 2rem;
-			}
-		}
-	}
-
 	ul {
-		list-style: none;
+		padding-right: var(--space--4);
 		margin: 0;
-		padding: 0 var(--space-2) 0 0;
+		list-style: none;
 		text-align: right;
 	}
 
 	li {
+		margin: var(--space--6) 0;
+		line-height: var(--space-0);
+	}
+
+	li:first-of-type {
+		margin-top: 0;
+	}
+
+	.letter {
+		position: relative;
+		animation-timing-function: ease;
+	}
+
+	.hover-wrapper {
+		display: inline-block;
+		&:hover {
+			a {
+				color: var(--blue-600);
+			}
+
+			.letter {
+				animation: bounce 0.3s forwards;
+			}
+		}
+	}
+	a {
+		color: var(--text);
+		font-size: var(--step-0);
+		text-decoration: none;
+		transition: all 0.5s ease;
+	}
+
+	.image {
 		margin: var(--space--4) 0;
 	}
 
-	a {
-		text-decoration: none;
-		color: var(--text);
-		font-size: var(--step-0);
+	img {
+		width: var(--space-0);
+		height: var(--space-0);
+		transition: 0.1s ease-in-out;
+
+		&:hover {
+			animation: wiggle 0.5s 1;
+			transform: scale(1.1);
+		}
 	}
 
-	img {
-		width: 1.5rem;
-		height: auto;
+	.sidebar {
+		z-index: 10;
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		text-align: right;
+
+		&.open {
+			position: absolute;
+			z-index: 5;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			grid-column: none;
+			grid-row: none;
+
+			ul {
+				padding: var(--space-3) 0 0 var(--space--4);
+				text-align: left;
+			}
+
+			a {
+				font-size: var(--step-4);
+			}
+
+			li {
+				margin: var(--space-0) 0;
+				line-height: var(--space-1);
+			}
+		}
+	}
+
+	@keyframes wiggle {
+		0% {
+			transform: rotate(0deg) scale(1.1);
+		}
+		33% {
+			transform: rotate(5deg) scale(1.1);
+		}
+		66% {
+			transform: rotate(-5deg) scale(1.1);
+		}
+		100% {
+			transform: rotate(0deg) scale(1.1);
+		}
+	}
+
+	@keyframes bounce {
+		0% {
+			bottom: 0;
+		}
+		30% {
+			bottom: 0.15em;
+		}
+		100% {
+			bottom: 0;
+		}
 	}
 </style>

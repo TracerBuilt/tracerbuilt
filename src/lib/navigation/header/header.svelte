@@ -8,40 +8,43 @@
 
 	export let open = false
 
-	$: if (currentPage && currentPage !== $page.path && windowWidth < 960) {
+	$: if (currentPage && currentPage !== $page.url.pathname && windowWidth < 960) {
 		open = false
 	}
 
 	onMount(() => {
-		currentPage = $page.path
+		currentPage = $page.url.pathname
 	})
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
 
 <header>
-	{#if windowWidth < 960}
-		<NavIcon bind:open />
-	{/if}
 	<a href="/">
 		<h2>.tracerbuilt</h2>
 	</a>
+	{#if windowWidth < 960}
+		<NavIcon bind:open />
+	{/if}
 </header>
 
 <style lang="scss">
 	header {
+		z-index: 5;
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
+		justify-content: space-between;
 		padding: var(--space-0) var(--space--6);
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
 
 		a {
-			text-decoration: none;
 			color: var(--text);
+			text-decoration: none;
 
 			h2 {
-				font-family: var(--mono);
 				margin: 0 var(--space--2);
+				font-family: var(--mono);
 			}
 		}
 	}

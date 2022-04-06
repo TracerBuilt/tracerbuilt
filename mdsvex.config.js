@@ -5,7 +5,8 @@ const config = {
 		ellipses: true,
 		backticks: false,
 		dashes: 'oldschool'
-	}
+	},
+	layout: './src/lib/blogLayout.svelte'
 }
 
 export default config
