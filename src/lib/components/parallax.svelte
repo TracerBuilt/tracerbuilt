@@ -6,6 +6,7 @@
 <style lang="scss">
 	:root {
 			--text: #fff;
+			--background: none;
 		}
 </style>
 </svelte:head>
