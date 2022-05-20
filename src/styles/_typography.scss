@@ -3,18 +3,16 @@
 @import '/node_modules/@fontsource/eb-garamond/variable-italic.css';
 @import '/node_modules/@fontsource/cabin/400.css';
 @import '/node_modules/@fontsource/cabin/variable-full.css';
-@import '/node_modules/@fontsource/fira-code/400.css';
-@import '/node_modules/@fontsource/fira-code/variable.css';
+@import '/node_modules/@fontsource/victor-mono/400.css';
 
 :root {
 	--serif: 'EB Garamond', serif;
 	--sans: 'Cabin', sans-serif;
-	--mono: 'Fira Code', mono;
+	--mono: 'Victor Mono', mono;
 
 	@supports (font-variation-settings: normal) {
 		--serif: 'EB GaramondVariable', serif;
 		--sans: 'CabinVariable', sans-serif;
-		--mono: 'Fira CodeVariable', mono;
 	}
 }
 
@@ -88,7 +86,7 @@ small,
 
 code {
 	font-family: var(--mono);
-	font-size: var(--step--1);
+	font-size: var(--step--2);
 }
 
 code[class*='language-'],

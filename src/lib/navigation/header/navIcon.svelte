@@ -13,6 +13,7 @@
 <style>
 	svg {
 		min-height: 26px;
+		cursor: pointer;
 		transition: transform 0.3s ease-in-out;
 	}
 

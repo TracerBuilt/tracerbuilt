@@ -103,6 +103,7 @@
 		grid-column: 1 / 2;
 		grid-row: 2 / 3;
 		text-align: right;
+		background-color: var(--background);
 
 		&.open {
 			position: absolute;

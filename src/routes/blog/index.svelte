@@ -23,7 +23,7 @@
 </script>
 
 <div class="main">
-	<h1>Blog</h1>
+	<h1 style:margin-top="0">Blog</h1>
 	<ul class="post-list">
 		{#each posts as { title, tags, outline, slug }}
 			<li class="post-wrapper">
@@ -38,11 +38,13 @@
 						</p>
 					</a>
 					<div class="tags">
-						{#each tags as tag, i}
-							<a href="blog/tags/{tag}"
-								>{tag}{#if i < tags.length - 1}, {/if}</a
-							>
-						{/each}
+						{#if tags}
+							{#each tags as tag, i}
+								<a href="blog/tags/{tag}"
+									>{tag}{#if i < tags.length - 1}, {/if}</a
+								>
+							{/each}
+						{/if}
 					</div>
 				</div>
 			</li>

@@ -8,10 +8,6 @@
 
 	export let open = false
 
-	$: if (currentPage && currentPage !== $page.url.pathname && windowWidth < 960) {
-		open = false
-	}
-
 	onMount(() => {
 		currentPage = $page.url.pathname
 	})
@@ -30,7 +26,7 @@
 
 <style lang="scss">
 	header {
-		z-index: 5;
+		z-index: 15;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
