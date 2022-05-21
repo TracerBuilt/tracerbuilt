@@ -5,8 +5,8 @@ tags: ['Rust', 'Wasm']
 published: '3-28-22'
 ---
 
-<script lang="ts">
-  import Wasm from '$lib/components/wasm.svelte'
-</script>
+<!-- <script lang="ts"> -->
+<!--   import Wasm from '$lib/components/wasm.svelte' -->
+<!-- </script> -->
 
 <Wasm />
