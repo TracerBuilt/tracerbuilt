@@ -9,4 +9,4 @@ published: '3-28-22'
 <!--   import Wasm from '$lib/components/wasm.svelte' -->
 <!-- </script> -->
 
-<Wasm />
+<!-- <Wasm /> -->
