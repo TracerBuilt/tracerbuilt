@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"build": "wasm-pack build ./rust/wasm-game-of-life --target web && svelte-kit build",
 		"preview": "svelte-kit preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -11,7 +11,7 @@
 		"format": "prettier --write --plugin-search-dir=. .",
 		"test": "jest src",
 		"test:watch": "npm run test -- --watch",
-		"wasm": "wasm-pack build ../rust/wasm-game-of-life --target web"
+		"wasm": "wasm-pack build ./rust/wasm-game-of-life --target web"
 	},
 	"browserslist": [
 		"last 2 versions",

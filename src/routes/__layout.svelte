@@ -30,6 +30,10 @@
 		background: var(--white);
 		grid-template-columns: minmax(3px, 1fr) minmax(10px, 4fr) minmax(3px, 1fr);
 		grid-template-rows: auto 1fr auto;
+
+		@media (max-width: 960px) {
+			grid-template-columns: var(--space-0) auto var(--space-0);
+		}
 	}
 
 	main {

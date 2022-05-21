@@ -30,8 +30,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: var(--space-0) var(--space--6);
-		grid-column: 1 / 3;
+		padding: var(--space-0) 0;
+		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 
 		a {
@@ -39,7 +39,6 @@
 			text-decoration: none;
 
 			h2 {
-				margin: 0 var(--space--2);
 				font-family: var(--mono);
 			}
 		}

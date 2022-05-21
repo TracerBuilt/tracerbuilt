@@ -4,3 +4,11 @@ node_modules
 /package
 /.netlify
 /build
+
+/rust/**/target
+/rust/**/**/*.rs.bk
+/rust/**/Cargo.lock
+/rust/**/bin/
+/rust/**/pkg/
+/rust/**/wasm-pack.log
+

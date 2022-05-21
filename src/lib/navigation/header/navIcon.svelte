@@ -10,7 +10,7 @@
 	</svg>
 </button>
 
-<style>
+<style lang="scss">
 	svg {
 		min-height: 26px;
 		cursor: pointer;
@@ -18,15 +18,17 @@
 	}
 
 	svg line {
-		stroke: currentColor;
+		stroke: currentcolor;
 		stroke-width: 3;
 		transition: transform 0.3s ease-in-out;
 	}
 
 	button {
 		z-index: 20;
-		background: transparent;
+		padding: 0;
 		border: none;
+		margin: 0;
+		background: transparent;
 		color: var(--text);
 	}
 
