@@ -112,11 +112,10 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			grid-column: none;
-			grid-row: none;
+			grid-column: 1 / 4;
 
 			ul {
-				padding: var(--space-3) 0 0 var(--space--4);
+				padding: 0 0 0 var(--space--4);
 				text-align: left;
 			}
 
@@ -127,6 +126,10 @@
 			li {
 				margin: var(--space-0) 0;
 				line-height: var(--space-1);
+			}
+
+			li:first-of-type {
+				margin-top: 0;
 			}
 		}
 	}

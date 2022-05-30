@@ -17,12 +17,7 @@ const config = {
 
 	kit: {
 		adapter: netlify(),
-		vite: {
-			/** plugins: [wasmPack(['./rust/wasm-game-of-life'], [])], */
-			/** optimizeDeps: {
-				exclude: ['./rust/wasm-game-of-life']
-			} */
-		}
+		vite: {}
 	}
 }
 

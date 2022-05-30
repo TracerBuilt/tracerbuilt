@@ -40,9 +40,7 @@
 					<div class="tags">
 						{#if tags}
 							{#each tags as tag, i}
-								<a href="blog/tags/{tag}"
-									>{tag}{#if i < tags.length - 1}, {/if}</a
-								>
+								{tag}{#if i < tags.length - 1}<span>, </span>{/if}
 							{/each}
 						{/if}
 					</div>
@@ -55,6 +53,7 @@
 <style lang="scss">
 	.main {
 		width: 60ch;
+		max-width: 100%;
 
 		p {
 			display: inline-block;

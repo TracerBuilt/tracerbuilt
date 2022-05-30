@@ -1,17 +1,18 @@
 <script lang="ts">
 	import JeffersonTheatreCompany from './jefferson-theatre-company.svelte'
+	import NdaEcommerceProject from './nda-ecommerce-project.svelte'
 </script>
 
 <div class="main">
 	<JeffersonTheatreCompany isBlurb={true} />
-	<JeffersonTheatreCompany isBlurb={true} />
+	<NdaEcommerceProject isBlurb={true} />
 </div>
 
 <style lang="scss">
 	.main {
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 2rem;
-		grid-gap: 1rem;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: var(--space-0);
 	}
 </style>

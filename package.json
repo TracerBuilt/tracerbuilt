@@ -18,51 +18,30 @@
 		"not dead",
 		">= 1%"
 	],
-	"jest": {
-		"transform": {
-			"^.+\\.svelte$": [
-				"svelte-jester",
-				{
-					"preprocess": true
-				}
-			],
-			"^.+\\.ts$": "ts-jest"
-		},
-		"moduleFileExtensions": [
-			"js",
-			"ts",
-			"svelte"
-		],
-		"setupFilesAfterEnv": [
-			"@testing-library/jest-dom/extend-expect"
-		]
-	},
 	"devDependencies": {
 		"@fontsource/victor-mono": "^4.5.4",
 		"@sveltejs/adapter-netlify": "next",
 		"@sveltejs/kit": "next",
-		"@testing-library/jest-dom": "^5.16.4",
-		"@typescript-eslint/eslint-plugin": "^5.25.0",
-		"@typescript-eslint/parser": "^5.25.0",
+		"@typescript-eslint/eslint-plugin": "^5.26.0",
+		"@typescript-eslint/parser": "^5.26.0",
 		"autoprefixer": "^10.4.7",
-		"cssnano": "^5.1.8",
-		"eslint": "^8.15.0",
+		"cssnano": "^5.1.9",
+		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"highlight.js": "^11.5.1",
-		"jest": "^28.1.0",
 		"mdsvex": "^0.10.5",
 		"normalize.css": "^8.0.1",
 		"postcss": "^8.4.14",
 		"postcss-html": "^1.4.1",
-		"postcss-load-config": "^3.1.4",
+		"postcss-load-config": "3",
 		"postcss-modules": "^4.3.1",
 		"postcss-preset-env": "^7.6.0",
 		"prettier": "2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"remark": "^14.0.2",
-		"sass": "^1.52.0",
-		"stylelint": "^14.8.2",
+		"sass": "^1.52.1",
+		"stylelint": "^14.8.3",
 		"stylelint-config-css-modules": "^4.1.0",
 		"stylelint-config-idiomatic-order": "^8.1.0",
 		"stylelint-config-prettier": "^9.0.3",
@@ -70,12 +49,12 @@
 		"stylelint-order": "^5.0.0",
 		"svelte": "^3.48.0",
 		"svelte-check": "^2.7.1",
-		"svelte-jester": "^2.3.2",
 		"svelte-preprocess": "^4.10.6",
 		"tslib": "^2.4.0",
 		"typescript": "^4.6.4",
 		"vite": "^2.9.9",
-		"vite-plugin-wasm-pack": "^0.1.12"
+		"vite-plugin-wasm-pack": "^0.1.12",
+		"vitest": "^0.12.9"
 	},
 	"type": "module",
 	"dependencies": {

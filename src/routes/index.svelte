@@ -14,12 +14,12 @@
 <h1>Full-Stack Web Developer</h1>
 <div class="main" id="about">
 	<p>
-		Which is a <em>very</em> fancy-sounding way of telling you that I think I'm a passable jack-of-all-trades
+		Which is a <em>very</em> fancy-sounding way of telling you that I'm a bit of a jack-of-all-trades
 		when it comes to web development.
 	</p>
 	<p>
 		I've created a few completely custom ecommerce sites, a bespoke non-profit site for a local high
-		school theater company, and more abandoned side projects than I care to mention.
+		school theater company, and more silly side projects than I care to mention.
 	</p>
 	<p>
 		And then there's this site itself, which should serve as an excellent example of the sort of
@@ -37,4 +37,10 @@
 	.h4:first-of-type {
 		margin-top: 0;
 	}
+
+	h1 {
+			background-clip: text;
+			background-image: linear-gradient(45deg, var(--blue-500), var(--red-400));
+			color: transparent;
+		}
 </style>

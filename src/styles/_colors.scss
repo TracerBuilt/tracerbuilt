@@ -71,3 +71,11 @@
 	--white: hsla(0, 0%, 100%, 1);
 	--background: var(--white);
 }
+
+a {
+	color: var(--blue-500);
+
+	&:hover {
+		color: var(--blue-400);
+	}
+}
