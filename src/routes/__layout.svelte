@@ -18,7 +18,11 @@
 	:global(body) {
 		width: 100vw;
 		height: 100vh;
-		margin: 0;
+		margin: 0 auto;
+
+		@media (min-width: 960px) {
+				margin: 0;
+			}
 	}
 
 	:global(#svelte) {
@@ -28,11 +32,11 @@
 		max-width: 100vw;
 		height: 100%;
 		background: var(--white);
-		grid-template-columns: minmax(3px, 1fr) minmax(10px, 4fr) minmax(3px, 1fr);
+		grid-template-columns: auto minmax(90%, var(--text-block-width)) auto;
 		grid-template-rows: auto 1fr auto;
 
-		@media (max-width: 960px) {
-			grid-template-columns: var(--space--4) minmax(90%, auto) var(--space--4);
+		@media (min-width: 960px) {
+			grid-template-columns: minmax(3px, 1fr) minmax(10px, 4fr) minmax(3px, 1fr);
 		}
 	}
 
@@ -41,5 +45,4 @@
 		grid-column: 2 / 3;
 		grid-row: 2 / 3;
 	}
-
 </style>

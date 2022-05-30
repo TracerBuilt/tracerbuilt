@@ -30,7 +30,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: var(--space-0) 0;
+		padding: var(--space--7) var(--space--7) var(--space--7) 0;
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 

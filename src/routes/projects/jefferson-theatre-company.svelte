@@ -89,7 +89,10 @@
 		transition: all 0.2s ease-in-out;
 
 		.blurb-text {
-			padding-left: var(--space--4);
+
+			@media(min-width: 960px) {
+					padding-left: var(--space--4);
+				}
 
 			h3 {
 				margin-top: 0;
@@ -110,6 +113,7 @@
 
 			img {
 				width: 100%;
+				max-width: var(--text-block-width);
 				height: auto;
 			}
 
