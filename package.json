@@ -32,6 +32,7 @@
 		"highlight.js": "^11.5.1",
 		"mdsvex": "^0.10.6",
 		"normalize.css": "^8.0.1",
+		"pnpm": "^7.1.7",
 		"postcss": "^8.4.14",
 		"postcss-html": "^1.4.1",
 		"postcss-load-config": "^3.1.4",
