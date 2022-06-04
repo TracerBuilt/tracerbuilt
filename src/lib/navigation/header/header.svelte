@@ -17,7 +17,7 @@
 
 <header>
 	<a href="/">
-		<h2>.tracerbuilt</h2>
+		<h2>tracerbuilt</h2>
 	</a>
 	{#if windowWidth < 960}
 		<NavIcon bind:open />
@@ -30,7 +30,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: var(--space--7) var(--space--7) var(--space--7) 0;
+		padding: var(--space--7);
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 

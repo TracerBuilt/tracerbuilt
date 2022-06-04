@@ -2,7 +2,7 @@
 title: 'A Shiny SvelteKit Blog'
 outline: 'Creating a simple markdown blog with SvelteKit, Typescript, PostCSS, and mdsvex'
 tags: ['Svelte', 'SvelteKit', 'Typescript', 'mdsvex', 'PostCSS', 'Markdown']
-published: '6-20-21'
+date: '6-20-21'
 ---
 
 # {title}
@@ -186,7 +186,7 @@ export default config;
 
 Now we'll need to add a `.svx` file, to see the fruits of our labors. Create a new folder in `routes` called `blog`, and add a file called `my-first-blog-post.svx`. Then, add whatever sort of thing you'd like, or copy this example, complete with a svelte component to show off the greatness that is mdsvex:
 
-```md
+```svelte
 ---
 frontmatter: Look!
 someMore: You can add any old frontmatter here, and access it as a prop

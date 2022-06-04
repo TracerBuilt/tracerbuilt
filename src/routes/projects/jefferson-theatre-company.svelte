@@ -89,10 +89,9 @@
 		transition: all 0.2s ease-in-out;
 
 		.blurb-text {
-
-			@media(min-width: 960px) {
-					padding-left: var(--space--4);
-				}
+			@media (min-width: 960px) {
+				padding-left: var(--space--4);
+			}
 
 			h3 {
 				margin-top: 0;
@@ -109,19 +108,23 @@
 
 		picture {
 			width: 100%;
+			max-width: var(--text-block-width);
 			margin-bottom: var(--space-0);
+			border: solid 0.01rem var(--text);
+			border-radius: 0.2rem;
+			box-shadow: var(--shadow-elevation-medium);
 
 			img {
 				width: 100%;
 				max-width: var(--text-block-width);
 				height: auto;
+				border-radius: 0.2rem;
 			}
 
 			@media (min-width: 960px) {
 				width: 40%;
 			}
 		}
-
 
 		@media (min-width: 960px) {
 			flex-direction: row;

@@ -4,11 +4,7 @@
 	export let open = false
 	let windowWidth: number
 
-	const routes = [
-		{ path: '/#about', text: 'About Me' },
-		{ path: '/#projects', text: 'Projects' },
-		{ path: '/blog', text: 'Blog' }
-	]
+	const routes = [{ path: '/blog', text: 'Blog' }]
 
 	$: if (windowWidth >= 960) {
 		open = false
@@ -104,6 +100,10 @@
 		grid-row: 2 / 3;
 		text-align: right;
 		background-color: var(--background);
+
+		@media (min-width: 960px) {
+background-color: transparent;
+			}
 
 		&.open {
 			position: absolute;

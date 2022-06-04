@@ -36,7 +36,7 @@
 		grid-template-rows: auto 1fr auto;
 
 		@media (min-width: 960px) {
-			grid-template-columns: minmax(3px, 1fr) minmax(10px, 4fr) minmax(3px, 1fr);
+			grid-template-columns: minmax(3px, 1fr) minmax(10px, var(--text-block-width)) minmax(3px, 1fr);
 		}
 	}
 

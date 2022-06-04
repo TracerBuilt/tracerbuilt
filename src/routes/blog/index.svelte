@@ -25,7 +25,7 @@
 <div class="main">
 	<h1 style:margin-top="0">Blog</h1>
 	<ul class="post-list">
-		{#each posts as { title, tags, outline, slug }}
+		{#each posts as { title, date, tags, outline, slug }}
 			<li class="post-wrapper">
 				<div class="post">
 					<a rel="prefetch" href="blog/{slug}">
