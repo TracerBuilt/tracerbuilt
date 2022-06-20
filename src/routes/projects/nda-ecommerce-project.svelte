@@ -6,7 +6,7 @@
 	<a href="projects/nda-ecommerce-project">
 		<div class="blurb">
 			<div class="blurb-text">
-				<h3><span class="small-caps">nda</span> Ecommerce Project</h3>
+				<h3>NDA Ecommerce Project</h3>
 				<p>
 					A Next.js ecommerce site for a small startup with limited funds that required creativity
 					in weaving <span class="small-caps">api</span>s together to provide a low-cost and
@@ -18,7 +18,7 @@
 	</a>
 {:else}
 	<div class="main">
-		<h1><span class="small-caps">nda</span> Ecommerce Project</h1>
+		<h1>NDA Ecommerce Project</h1>
 		<p>
 			<strong>Stack</strong>: Next.js, Typescript, Netlify, Stripe
 		</p>

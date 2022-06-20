@@ -16,21 +16,20 @@
 
 <style lang="scss">
 	:global(body) {
+		position: relative;
 		width: 100vw;
 		height: 100vh;
 		margin: 0 auto;
 
 		@media (min-width: 960px) {
-				margin: 0;
-			}
+			margin: 0;
+		}
 	}
 
 	:global(#svelte) {
-		position: relative;
 		display: grid;
 		width: 100%;
 		max-width: 100vw;
-		height: 100%;
 		background: var(--white);
 		grid-template-columns: auto minmax(90%, var(--text-block-width)) auto;
 		grid-template-rows: auto 1fr auto;

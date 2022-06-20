@@ -52,11 +52,10 @@
 
 <style lang="scss">
 	.main {
-		width: 60ch;
-		max-width: 100%;
-
 		p {
 			display: inline-block;
+			width: 60ch;
+			max-width: 100%;
 			white-space: wrap;
 		}
 	}

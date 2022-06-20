@@ -15,22 +15,24 @@
 {#if open || windowWidth >= 960}
 	<div class="sidebar" class:open transition:fly={{ duration: 300, x: -700, opacity: 1 }}>
 		<ul>
-			{#each routes as route, i}
-				<li in:fly={{ duration: 300, x: -200, delay: (i + 1) * 100 }}>
-					<div class="hover-wrapper">
-						<a href={route.path} on:click={() => (open = false)}
-							>{#each route.text as letter, j}<span
-									class="letter"
-									style="animation-delay: {j / 20}s;">{letter}</span
-								>{/each}</a
-						>
-					</div>
-				</li>
-			{/each}
-			<li class="image" in:fly={{ duration: 300, x: -200, delay: 400 }}>
+			<li in:fly={{ duration: 300, x: -200, delay: 100 }}>
+				<div class="hover-wrapper">
+					<a href="/blog" on:click={() => (open = false)}
+						>{#each 'Blog' as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
+								>{letter}</span
+							>{/each}</a
+					>
+				</div>
+			</li>
+			<li class="image" in:fly={{ duration: 300, x: -200, delay: 200 }}>
 				<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a>
 			</li>
-			<li class="image" in:fly={{ duration: 300, x: -200, delay: 500 }}>
+			<li class="image" in:fly={{ duration: 300, x: -200, delay: 300 }}>
+				<a href="https://linkedin.com/in/TracerBuilt"
+					><img src="/icons/linkedin.svg" alt="Linkedin" /></a
+				>
+			</li>
+			<li class="image" in:fly={{ duration: 300, x: -200, delay: 400 }}>
 				<a href="https://twitter.com/Tracer_Built"><img src="/icons/twitter.svg" alt="Twitter" /></a
 				>
 			</li>
@@ -74,7 +76,7 @@
 	}
 	a {
 		color: var(--text);
-		font-size: var(--step-0);
+		font-size: var(--step-2);
 		text-decoration: none;
 		transition: all 0.5s ease;
 	}
@@ -102,8 +104,8 @@
 		background-color: var(--background);
 
 		@media (min-width: 960px) {
-background-color: transparent;
-			}
+			background-color: transparent;
+		}
 
 		&.open {
 			position: absolute;
@@ -124,12 +126,17 @@ background-color: transparent;
 			}
 
 			li {
-				margin: var(--space-0) 0;
+				margin: var(--space--2) 0;
 				line-height: var(--space-1);
 			}
 
 			li:first-of-type {
 				margin-top: 0;
+			}
+
+			img {
+				width: var(--space-3);
+				height: var(--space-3);
 			}
 		}
 	}
