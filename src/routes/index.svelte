@@ -3,56 +3,62 @@
 </script>
 
 <script lang="ts">
-	import Projects from './projects/_index.svelte'
+	import Projects from '$lib/components/projects.svelte'
+	import About from '$lib/components/about.svelte'
+	import Intro from '$lib/components/intro.svelte'
+	import Stack from '$lib/components/stack.svelte'
+	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte'
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<div class="main">
-	<div class="h4">My name is Tyler, and I'm a</div>
-	<h1>Full-Stack Web Developer</h1>
-	<div id="about">
-		<p>
-			I've created a few completely custom ecommerce sites, a bespoke non-profit site for a local
-			high school theater company, and more silly side projects than I care to mention.
-		</p>
-		<p>
-			And then there's this site itself, which should serve as an excellent example of the sort of
-			things I'm enjoying working with at the moment, interesting problems I've found to solve, and
-			any generally helpful information I feel called to share.
-		</p>
-	</div>
-	<div id="projects">
-		<h2>Projects</h2>
-		<Projects />
-	</div>
-</div>
-<div class="swash" />
+<main>
+	<Intro />
+	<IntersectionObserver let:intersecting top={-100}>
+		{#if intersecting}
+			<About />
+		{/if}
+	</IntersectionObserver>
+	<IntersectionObserver let:intersecting top={-200}>
+		{#if intersecting}
+			<Stack />
+		{/if}
+	</IntersectionObserver>
+
+	<IntersectionObserver let:intersecting top={-300}>
+		{#if intersecting}
+			<Projects />
+		{/if}
+	</IntersectionObserver>
+	<div class="swash" />
+</main>
 
 <style lang="scss">
-	.h4:first-of-type {
-		margin-top: 0;
-	}
+	main {
+		z-index: 2;
+		min-height: 200vh;
+		grid-column: 1 / span 7;
+		grid-row: 2 / span 1;
 
-	h1 {
-		background-clip: text;
-		background-image: linear-gradient(135deg, var(--blue-500), var(--red-400));
-		color: transparent;
+		@media (min-width: 960px) {
+			grid-column: 2 / span 5;
+		}
 	}
 
 	.swash {
 		position: absolute;
-		z-index: 1;
+		z-index: -1;
 		height: 50vh;
-		background: linear-gradient(165deg, var(--white) 50%, transparent 50%),
+		max-height: 40%;
+		background: linear-gradient(195deg, var(--white) 50%, transparent 50%),
 			linear-gradient(45deg, var(--blue-500), var(--red-400));
 		inset: auto 0 0 0;
 
 		@media (min-width: 1024px) {
 			height: 30rem;
-			background: linear-gradient(172deg, var(--white) 50%, transparent 50%),
+			background: linear-gradient(188deg, var(--white) 50%, transparent 50%),
 				linear-gradient(45deg, var(--blue-500), var(--red-400));
 		}
 	}

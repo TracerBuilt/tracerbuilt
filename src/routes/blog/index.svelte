@@ -22,7 +22,7 @@
 	export let posts
 </script>
 
-<div class="main">
+<main>
 	<h1 style:margin-top="0">Blog</h1>
 	<ul class="post-list">
 		{#each posts as { title, date, tags, outline, slug }}
@@ -48,14 +48,15 @@
 			</li>
 		{/each}
 	</ul>
-</div>
+</main>
 
 <style lang="scss">
-	.main {
+	main {
+		grid-column: 1 / span 7;
+		grid-row: 2 / span 2;
+
 		p {
-			display: inline-block;
-			width: 60ch;
-			max-width: 100%;
+			max-width: 60ch;
 			white-space: wrap;
 		}
 	}

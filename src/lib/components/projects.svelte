@@ -1,13 +1,16 @@
 <script lang="ts">
-	import JeffersonTheatreCompany from './jefferson-theatre-company.svelte'
-	import NdaEcommerceProject from './nda-ecommerce-project.svelte'
+	import JeffersonTheatreCompany from '../../routes/projects/jefferson-theatre-company.svelte'
+	import NdaEcommerceProject from '../../routes/projects/nda-ecommerce-project.svelte'
+
+	import { fly } from 'svelte/transition'
 </script>
 
 <div class="main">
-	<div class="card">
+	<h2 in:fly={{duration: 300, x: -200, delay: 400}}>Projects</h2>
+	<div in:fly={{duration: 400, x: 200, delay: 1000}} class="card">
 		<JeffersonTheatreCompany isBlurb={true} />
 	</div>
-	<div class="card">
+	<div in:fly={{duration: 400, x: 200, delay: 1600}} class="card">
 		<NdaEcommerceProject isBlurb={true} />
 	</div>
 </div>

@@ -25,9 +25,13 @@
 
 	button {
 		z-index: 20;
+		width: 100%;
+		height: 100%;
 		padding: 0;
+
 		border: none;
 		margin: 0;
+		grid-column: 7 / span 1;
 		background: transparent;
 		color: var(--text);
 	}

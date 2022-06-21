@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition'
+	import { fly, fade } from 'svelte/transition'
 
 	export let open = false
 	let windowWidth: number
@@ -13,31 +13,62 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 {#if open || windowWidth >= 960}
-	<div class="sidebar" class:open transition:fly={{ duration: 300, x: -700, opacity: 1 }}>
-		<ul>
-			<li in:fly={{ duration: 300, x: -200, delay: 100 }}>
-				<div class="hover-wrapper">
-					<a href="/blog" on:click={() => (open = false)}
-						>{#each 'Blog' as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
-								>{letter}</span
-							>{/each}</a
+	{#if windowWidth < 960}
+		<div class="overlay" transition:fade={{ duration: 300 }} />
+		<div class="sidebar" class:open transition:fly={{ duration: 300, x: 700, opacity: 0.5 }}>
+			<ul>
+				<li in:fly={{ duration: 300, x: 200, delay: 100 }}>
+					<div class="hover-wrapper">
+						<a href="/blog" on:click={() => (open = false)}
+							>{#each 'Blog' as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
+									>{letter}</span
+								>{/each}</a
+						>
+					</div>
+				</li>
+				<li class="image" in:fly={{ duration: 300, x: 200, delay: 200 }}>
+					<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a>
+				</li>
+				<li class="image" in:fly={{ duration: 300, x: 200, delay: 300 }}>
+					<a href="https://linkedin.com/in/TracerBuilt"
+						><img src="/icons/linkedin.svg" alt="Linkedin" /></a
 					>
-				</div>
-			</li>
-			<li class="image" in:fly={{ duration: 300, x: -200, delay: 200 }}>
-				<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a>
-			</li>
-			<li class="image" in:fly={{ duration: 300, x: -200, delay: 300 }}>
-				<a href="https://linkedin.com/in/TracerBuilt"
-					><img src="/icons/linkedin.svg" alt="Linkedin" /></a
-				>
-			</li>
-			<li class="image" in:fly={{ duration: 300, x: -200, delay: 400 }}>
-				<a href="https://twitter.com/Tracer_Built"><img src="/icons/twitter.svg" alt="Twitter" /></a
-				>
-			</li>
-		</ul>
-	</div>
+				</li>
+				<li class="image" in:fly={{ duration: 300, x: 200, delay: 400 }}>
+					<a href="https://twitter.com/Tracer_Built"
+						><img src="/icons/twitter.svg" alt="Twitter" /></a
+					>
+				</li>
+			</ul>
+		</div>
+	{:else}
+		<div class="sidebar" class:open in:fly={{ duration: 300, x: -700, opacity: 1 }}>
+			<ul>
+				<li in:fly={{ duration: 300, x: -200, delay: 100 }}>
+					<div class="hover-wrapper">
+						<a href="/blog" on:click={() => (open = false)}
+							>{#each 'Blog' as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
+									>{letter}</span
+								>{/each}</a
+						>
+					</div>
+				</li>
+				<li class="image" in:fly={{ duration: 300, x: -200, delay: 200 }}>
+					<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a>
+				</li>
+				<li class="image" in:fly={{ duration: 300, x: -200, delay: 300 }}>
+					<a href="https://linkedin.com/in/TracerBuilt"
+						><img src="/icons/linkedin.svg" alt="Linkedin" /></a
+					>
+				</li>
+				<li class="image" in:fly={{ duration: 300, x: -200, delay: 400 }}>
+					<a href="https://twitter.com/Tracer_Built"
+						><img src="/icons/twitter.svg" alt="Twitter" /></a
+					>
+				</li>
+			</ul>
+		</div>
+	{/if}
 {/if}
 
 <style lang="scss">
@@ -96,29 +127,24 @@
 		}
 	}
 
-	.sidebar {
+	.overlay {
 		z-index: 10;
-		grid-column: 1 / 2;
-		grid-row: 2 / 3;
-		text-align: right;
-		background-color: var(--background);
+		display: grid;
+		background: hsl(208 92% 5% / 50%);
+		grid-column: 1 / span 7;
+		grid-row: 2 / span 2;
+	}
 
-		@media (min-width: 960px) {
-			background-color: transparent;
-		}
+	.sidebar {
+		z-index: 20;
+		background-color: var(--background);
+		grid-column: 4 / span 4;
+		grid-row: 2 / span 2;
+		text-align: right;
 
 		&.open {
-			position: absolute;
-			z-index: 5;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			grid-column: 1 / 4;
-
 			ul {
-				padding: 0 0 0 var(--space--4);
-				text-align: left;
+				padding: 0 ;
 			}
 
 			a {
@@ -126,7 +152,7 @@
 			}
 
 			li {
-				margin: var(--space--2) 0;
+				margin: var(--space--2) var(--space-5);
 				line-height: var(--space-1);
 			}
 
@@ -135,8 +161,17 @@
 			}
 
 			img {
-				width: var(--space-3);
-				height: var(--space-3);
+				width: var(--space-1);
+				height: var(--space-1);
+			}
+		}
+
+		@media (min-width: 960px) {
+			grid-column: 1 / span 1;
+			background: none;
+
+			ul {
+				margin-top: var(--space-0);
 			}
 		}
 	}

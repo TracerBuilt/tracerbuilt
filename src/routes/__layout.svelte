@@ -1,47 +1,38 @@
 <script lang="ts">
-	import Header from '$lib/navigation/header/header.svelte'
+	import Header from '$lib/navigation/header.svelte'
 	import Footer from '$lib/navigation/footer.svelte'
 	import '../app.scss'
 	import Sidebar from '$lib/navigation/sidebar.svelte'
+	import NavIcon from '$lib/navigation/navIcon.svelte'
 
 	let navOpen = false
+	let windowWidth: number
 </script>
 
+<svelte:window bind:innerWidth={windowWidth} />
+
 <Header bind:open={navOpen} />
+{#if windowWidth < 960}
+	<NavIcon bind:open={navOpen} />
+{/if}
 <Sidebar bind:open={navOpen} />
-<main>
-	<slot />
-</main>
+<slot />
 <Footer />
 
 <style lang="scss">
 	:global(body) {
 		position: relative;
-		width: 100vw;
-		height: 100vh;
-		margin: 0 auto;
-
-		@media (min-width: 960px) {
-			margin: 0;
-		}
+		display: border-box;
+		padding: var(--space--6);
+		z-index: -1;
+		background-color: var(--background-color);
 	}
 
 	:global(#svelte) {
 		display: grid;
 		width: 100%;
-		max-width: 100vw;
-		background: var(--white);
-		grid-template-columns: auto minmax(90%, var(--text-block-width)) auto;
-		grid-template-rows: auto 1fr auto;
-
-		@media (min-width: 960px) {
-			grid-template-columns: minmax(3px, 1fr) minmax(10px, var(--text-block-width)) minmax(3px, 1fr);
-		}
-	}
-
-	main {
-		padding: var(--space--7);
-		grid-column: 2 / 3;
-		grid-row: 2 / 3;
+		gap: var(--space--6);
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: auto repeat(auto-fit, minmax(12rem, 1fr)) auto;
 	}
 </style>
