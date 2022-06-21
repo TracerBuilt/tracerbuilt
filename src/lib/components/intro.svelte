@@ -1,7 +1,11 @@
 <div class="intro">
-	<div class="h4">Hey, I'm Tyler, a</div>
-	<h1>Full-Stack Web Developer,</h1>
-	<div class="h2">and I love to build <span class="fancy-text">cool stuff</span> for the web.</div>
+	<div class="text">
+		<div class="h4">Hey, I'm Tyler, a</div>
+		<h1>Full-Stack Web Developer,</h1>
+		<div class="h2">
+			and I love to build <span class="fancy-text">cool stuff</span> for the web.
+		</div>
+	</div>
 	<div class="swoosh" />
 </div>
 
@@ -12,6 +16,10 @@
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	.text {
+			margin-bottom: var(--space-7);
+		}
 	.h4 {
 		margin-bottom: 0;
 	}
