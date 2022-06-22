@@ -3,15 +3,16 @@
 	import NdaEcommerceProject from '../../routes/projects/nda-ecommerce-project.svelte'
 
 	import { fly } from 'svelte/transition'
+	import { cubicInOut } from 'svelte/easing'
 </script>
 
 <div class="main">
-	<h2 in:fly={{ duration: 300, x: -200, delay: 200 }}>Projects</h2>
+	<h2 in:fly={{ duration: 300, x: -200, easing: cubicInOut, delay: 200 }}>Projects</h2>
 	<div class="container">
-		<div in:fly={{ duration: 400, x: 200, delay: 500 }} class="card">
+		<div in:fly={{ duration: 400, x: 200, easing: cubicInOut, delay: 500 }} class="card">
 			<JeffersonTheatreCompany isBlurb={true} />
 		</div>
-		<div in:fly={{ duration: 400, x: 200, delay: 1000 }} class="card">
+		<div in:fly={{ duration: 400, x: 200, easing: cubicInOut, delay: 1000 }} class="card">
 			<NdaEcommerceProject isBlurb={true} />
 		</div>
 	</div>

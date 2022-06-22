@@ -1,22 +1,25 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition'
+	import { elasticOut, cubicInOut } from 'svelte/easing'
+
+	const easing = elasticOut
 </script>
 
 <div id="stack">
-	<h2 in:fly={{ duration: 400, x: -200, delay: 200 }}>Stack</h2>
-	<p in:fly={{ duration: 400, x: -200, delay: 500 }}>
+	<h2 in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }}>Stack</h2>
+	<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 500 }}>
 		Technologies I'm currently enjoying working with.
 	</p>
 	<div class="container">
 		<img
-			in:fly={{ duration: 200, x: -200, delay: 600 }}
+			in:fly={{ duration: 500, x: -200, easing: easing, delay: 600 }}
 			src="/icons/svelte.svg"
 			width="512"
 			height="512"
 			alt="Svelte"
 		/>
 		<img
-			in:fly={{ duration: 200, x: -200, delay: 700 }}
+			in:fly={{ duration: 500, x: -200, easing: easing, delay: 750 }}
 			src="/icons/javascript.svg"
 			class="smaller"
 			width="512"
@@ -24,7 +27,7 @@
 			alt="Javascript"
 		/>
 		<img
-			in:fly={{ duration: 200, x: -200, delay: 800 }}
+			in:fly={{ duration: 500, x: -200, easing: easing, delay: 900 }}
 			src="/icons/typescript.svg"
 			class="smaller"
 			width="512"
@@ -32,21 +35,21 @@
 			alt="Typescript"
 		/>
 		<img
-			in:fly={{ duration: 200, x: -200, delay: 900 }}
+			in:fly={{ duration: 500, x: -200, easing: easing, delay: 1050 }}
 			src="/icons/node.svg"
 			width="589.827"
 			height="361.238"
 			alt="Node"
 		/>
 		<img
-			in:fly={{ duration: 200, x: -200, delay: 1000 }}
+			in:fly={{ duration: 500, x: -200, easing: easing, delay: 1200 }}
 			src="/icons/react.svg"
 			width="512"
 			height="512"
 			alt="React"
 		/>
 		<img
-			in:fly={{ duration: 200, x: -200, delay: 1100 }}
+			in:fly={{ duration: 500, x: -200, easing: easing, delay: 1350 }}
 			src="/icons/sass.svg"
 			class="smaller"
 			width="512"
