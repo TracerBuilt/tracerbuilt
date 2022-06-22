@@ -17,7 +17,7 @@
 		</div>
 	</a>
 {:else}
-	<div class="main">
+	<main>
 		<h1>NDA Ecommerce Project</h1>
 		<p>
 			<strong>Stack</strong>: Next.js, Typescript, Netlify, Stripe
@@ -56,7 +56,7 @@
 				>s.
 			</li>
 		</ul>
-	</div>
+	</main>
 {/if}
 
 <style lang="scss">
@@ -104,10 +104,12 @@
 		}
 	}
 
-	.main {
-		max-width: var(--text-block-width);
+	main {
+		margin: 0 auto;
+		width: var(--text-block-width);
 
 		h1 {
+			display: inline;
 			margin: 0;
 			background-clip: text;
 			background-image: linear-gradient(45deg, var(--blue-500), var(--red-400));
@@ -117,7 +119,6 @@
 		picture {
 			img {
 				width: 100%;
-				max-width: 60ch;
 				height: auto;
 			}
 
@@ -127,11 +128,5 @@
 				0px 8px 12.8px -14px rgba(0, 0, 0, 0.038), 0px 13.2px 21.2px -14px rgba(0, 0, 0, 0.044),
 				0px 23.1px 37px -14px rgba(0, 0, 0, 0.052), 0px 50px 80px -14px rgba(0, 0, 0, 0.07);
 		}
-	}
-
-	.gradient-text {
-		background-clip: text;
-		background-image: linear-gradient(45deg, var(--blue-500), var(--red-400));
-		color: transparent;
 	}
 </style>

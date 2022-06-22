@@ -52,9 +52,6 @@
 
 <style lang="scss">
 	main {
-		grid-column: 1 / span 7;
-		grid-row: 2 / span 2;
-
 		p {
 			max-width: 60ch;
 			white-space: wrap;

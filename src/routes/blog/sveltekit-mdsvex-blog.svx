@@ -5,8 +5,6 @@ tags: ['Svelte', 'SvelteKit', 'Typescript', 'mdsvex', 'PostCSS', 'Markdown']
 date: '6-20-21'
 ---
 
-# {title}
-
 This post will cover a fast and simple way to set up a basic blog using SvelteKit. The first step is to create a new SvelteKit app, following the instructions from [their documentation](https://kit.svelte.dev/docs#introduction-getting-started), let's start with:
 
 ```bash

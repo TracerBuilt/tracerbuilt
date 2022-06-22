@@ -27,7 +27,7 @@
 		{/if}
 	</IntersectionObserver>
 
-	<IntersectionObserver let:intersecting top={-300}>
+	<IntersectionObserver let:intersecting top={-200}>
 		{#if intersecting}
 			<Projects />
 		{/if}
@@ -39,12 +39,6 @@
 	main {
 		z-index: 2;
 		min-height: 200vh;
-		grid-column: 1 / span 7;
-		grid-row: 2 / span 1;
-
-		@media (min-width: 960px) {
-			grid-column: 2 / span 5;
-		}
 	}
 
 	.swash {

@@ -25,7 +25,7 @@
 		</div>
 	</a>
 {:else}
-	<div class="main">
+	<main>
 		<h1>Jefferson Theatre Company</h1>
 		<p style:margin-bottom="0">
 			<strong>Stack</strong>: Svelte, Prismic, Snipcart, Google
@@ -73,7 +73,7 @@
 			important to me that they'd need to spend as little as possible of their alreaady limited time
 			keeping the site running.
 		</p>
-	</div>
+	</main>
 {/if}
 
 <style lang="scss">
@@ -129,8 +129,12 @@
 		}
 	}
 
-	.main {
+	main {
+		margin: 0 auto;
+		width: var(--text-block-width);
+
 		h1 {
+			display: inline;
 			margin: 0;
 			background-clip: text;
 			background-image: linear-gradient(45deg, var(--blue-500), var(--red-400));
@@ -140,7 +144,6 @@
 		picture {
 			img {
 				width: 100%;
-				max-width: 60ch;
 				height: auto;
 			}
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Nav from './nav.svelte'
 	let windowWidth: number
 
 	export let open = false
@@ -8,24 +9,22 @@
 
 <header>
 	<a on:click={() => (open = false)} class="h2" href="/"> tracerbuilt </a>
+	<Nav bind:open />
 </header>
 
 <style lang="scss">
 	header {
+		display: flex;
+		width: 100%;
 		z-index: 15;
 		align-items: baseline;
 		justify-content: space-between;
-		grid-column: 1 / span 4;
-		grid-row: 1 / 2;
-
-		@media (min-width: 960px) {
-			grid-column: 2 / span 4;
-		}
 
 		a {
 			color: var(--text);
 			text-decoration: none;
 			font-family: var(--mono);
+			margin: 0;
 		}
 	}
 </style>
