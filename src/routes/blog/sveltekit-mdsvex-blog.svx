@@ -2,7 +2,7 @@
 title: 'A Shiny SvelteKit Blog'
 outline: 'Creating a simple markdown blog with SvelteKit, Typescript, PostCSS, and mdsvex'
 tags: ['Svelte', 'SvelteKit', 'Typescript', 'mdsvex', 'PostCSS', 'Markdown']
-date: '6-20-21'
+date: '2021-6-20'
 ---
 
 This post will cover a fast and simple way to set up a basic blog using SvelteKit. The first step is to create a new SvelteKit app, following the instructions from [their documentation](https://kit.svelte.dev/docs#introduction-getting-started), let's start with:
