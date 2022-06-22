@@ -16,23 +16,23 @@
 
 <main>
 	<Intro />
-	<IntersectionObserver let:intersecting top={-100}>
-		<div class="placehodler">
+	<IntersectionObserver let:intersecting top={-400}>
+		<div style:min-height={'30rem'}>
 			{#if intersecting}
 				<About />
 			{/if}
 		</div>
 	</IntersectionObserver>
-	<IntersectionObserver let:intersecting top={-200}>
-		<div class="placeholder stack">
+	<IntersectionObserver let:intersecting top={-500}>
+		<div style:min-height={'5rem'}>
 			{#if intersecting}
 				<Stack />
 			{/if}
 		</div>
 	</IntersectionObserver>
 
-	<IntersectionObserver let:intersecting top={-200}>
-		<div class="placeholder">
+	<IntersectionObserver let:intersecting top={-500}>
+		<div style:min-height={'40rem'}>
 			{#if intersecting}
 				<Projects />
 			{/if}
@@ -45,14 +45,6 @@
 	main {
 		z-index: 2;
 		min-height: 200vh;
-	}
-
-	.placeholder {
-		min-height: 20rem;
-
-		&.stack {
-			min-height: 5rem;
-		}
 	}
 
 	.swash {
