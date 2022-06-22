@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte'
 
 	export let title
@@ -8,14 +8,7 @@
 	onMount(() => {
 		const parsedDate = new Date(date)
 
-		const options = {
-			weekday: 'long',
-			day: 'numeric',
-			month: 'long',
-			year: 'numeric'
-		}
-
-		function getSuffix(numericDay: number) {
+		function getSuffix(numericDay) {
 			const day = numericDay.toString()
 			switch (day.charAt(day.length - 1)) {
 				case '1':
@@ -30,7 +23,9 @@
 		}
 
 		formattedDate = `
-			${Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(parsedDate)}, the ${getSuffix(parsedDate.getDate())} of ${Intl.DateTimeFormat('en-US', { month: 'long' }).format(parsedDate)}`
+			${Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(parsedDate)}, the ${getSuffix(
+			parsedDate.getDate()
+		)} of ${Intl.DateTimeFormat('en-US', { month: 'long' }).format(parsedDate)}`
 	})
 </script>
 
@@ -40,7 +35,7 @@
 	<slot />
 </div>
 
-<style lang="scss">
+<style>
 	.post {
 		max-width: var(--text-block-width);
 		margin: 0 auto;
@@ -49,6 +44,7 @@
 	h1 {
 		margin-bottom: 0;
 	}
+
 	h5 {
 		margin-top: 0;
 		color: var(--blue-grey-500);
@@ -66,11 +62,11 @@
 	}
 
 	:global(.post p img) {
-		width: 100vw;
 		position: relative;
-		left: 50%;
 		right: 50%;
-		margin-left: -50vw;
+		left: 50%;
+		width: 100vw;
 		margin-right: -50vw;
+		margin-left: -50vw;
 	}
 </style>
