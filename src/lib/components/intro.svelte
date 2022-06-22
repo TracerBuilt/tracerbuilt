@@ -45,6 +45,7 @@
 	}
 
 	.swoosh {
+		z-index: -1;
 		position: absolute;
 		top: 60vh;
 		right: 0;
@@ -72,11 +73,7 @@
 			height: 15rem;
 			background-image: linear-gradient(0deg, hsl(0 0% 100% / 0.25), transparent);
 			clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
-		}
 
-		&:hover {
-			&::before {
-			}
 		}
 
 		@media (min-width: 960px) {
