@@ -18,8 +18,13 @@
 			<div class="blurb-text">
 				<h3>Jefferson Theatre Company</h3>
 				<p>
-					A completely custom SvelteKit based site for a local high school theater company, with
+					A completely custom SvelteKit-based site for a local, non-profit theater company, with
 					ecommerce and Prismic CMS integration.
+				</p>
+				<p>
+					Featured automatic Paypal payments for audition application forms, and Google sheets <span
+						class="small-caps">api</span
+					> access for storing application data.
 				</p>
 			</div>
 		</div>
@@ -121,6 +126,7 @@
 
 			@media (min-width: 720px) {
 				width: 50%;
+				margin-bottom: 0;
 			}
 		}
 
