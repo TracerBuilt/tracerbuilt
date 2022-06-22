@@ -6,22 +6,37 @@
 	let formattedDate = ''
 
 	onMount(() => {
-		const parsedDate = new Date(Date.parse(date))
+		const parsedDate = new Date(date)
 
 		const options = {
-			weekday: "long",
+			weekday: 'long',
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
 		}
 
-		formattedDate = parsedDate.toLocaleString('en-US', options)
+		function getSuffix(numericDay: number) {
+			const day = numericDay.toString()
+			switch (day.charAt(day.length - 1)) {
+				case '1':
+					return day + 'st'
+				case '2':
+					return day + 'nd'
+				case '3':
+					return day + 'rd'
+				default:
+					return day + 'th'
+			}
+		}
+
+		formattedDate = `
+			${Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(parsedDate)}, the ${getSuffix(parsedDate.getDate())} of ${Intl.DateTimeFormat('en-US', { month: 'long' }).format(parsedDate)}`
 	})
 </script>
 
 <div class="post">
 	<h1>{title}</h1>
-	<h5><span class="published">Published:</span> {formattedDate}</h5>
+	<h5>{formattedDate}</h5>
 	<slot />
 </div>
 
@@ -36,10 +51,7 @@
 	}
 	h5 {
 		margin-top: 0;
-
-		.published {
-			color: var(--blue-grey-500);
-		}
+		color: var(--blue-grey-500);
 	}
 
 	:global(.post pre) {
