@@ -69,7 +69,7 @@
 		justify-content: center;
 		gap: var(--space--4);
 		grid-template-columns: repeat(auto-fill, 1fr);
-		grid-template-rows: 1fr;
+		grid-template-rows: repeat(auto-fill, 1fr);
 	}
 
 	img {
@@ -79,6 +79,12 @@
 		box-shadow: var(--shadow-elevation-medium);
 		grid-row: 1;
 		justify-self: center;
+
+		@media (max-width: 370px) {
+			&:nth-last-child(-n + 3) {
+				grid-row: 3;
+			}
+		}
 
 		@media (min-width: 640px) {
 			width: 4rem;

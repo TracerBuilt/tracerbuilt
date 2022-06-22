@@ -17,20 +17,26 @@
 <main>
 	<Intro />
 	<IntersectionObserver let:intersecting top={-100}>
-		{#if intersecting}
-			<About />
-		{/if}
+		<div class="placehodler">
+			{#if intersecting}
+				<About />
+			{/if}
+		</div>
 	</IntersectionObserver>
 	<IntersectionObserver let:intersecting top={-200}>
-		{#if intersecting}
-			<Stack />
-		{/if}
+		<div class="placeholder stack">
+			{#if intersecting}
+				<Stack />
+			{/if}
+		</div>
 	</IntersectionObserver>
 
 	<IntersectionObserver let:intersecting top={-200}>
-		{#if intersecting}
-			<Projects />
-		{/if}
+		<div class="placeholder">
+			{#if intersecting}
+				<Projects />
+			{/if}
+		</div>
 	</IntersectionObserver>
 	<div class="swash" />
 </main>
@@ -39,6 +45,14 @@
 	main {
 		z-index: 2;
 		min-height: 200vh;
+	}
+
+	.placeholder {
+		min-height: 20rem;
+
+		&.stack {
+			min-height: 5rem;
+		}
 	}
 
 	.swash {
