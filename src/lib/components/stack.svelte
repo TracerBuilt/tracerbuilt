@@ -12,14 +12,14 @@
 	</p>
 	<div class="container">
 		<img
-			in:fly={{ duration: 500, x: -200, easing: easing, delay: 600 }}
+			in:fly={{ duration: 600, y: 300, easing: easing, delay: 600 }}
 			src="/icons/svelte.svg"
 			width="512"
 			height="512"
 			alt="Svelte"
 		/>
 		<img
-			in:fly={{ duration: 500, x: -200, easing: easing, delay: 750 }}
+			in:fly={{ duration: 600, y: 300, easing: easing, delay: 750 }}
 			src="/icons/javascript.svg"
 			class="smaller"
 			width="512"
@@ -27,7 +27,7 @@
 			alt="Javascript"
 		/>
 		<img
-			in:fly={{ duration: 500, x: -200, easing: easing, delay: 900 }}
+			in:fly={{ duration: 600, y: 300, easing: easing, delay: 900 }}
 			src="/icons/typescript.svg"
 			class="smaller"
 			width="512"
@@ -35,21 +35,21 @@
 			alt="Typescript"
 		/>
 		<img
-			in:fly={{ duration: 500, x: -200, easing: easing, delay: 1050 }}
+			in:fly={{ duration: 600, y: 300, easing: easing, delay: 1050 }}
 			src="/icons/node.svg"
 			width="589.827"
 			height="361.238"
 			alt="Node"
 		/>
 		<img
-			in:fly={{ duration: 500, x: -200, easing: easing, delay: 1200 }}
+			in:fly={{ duration: 600, y: 300, easing: easing, delay: 1200 }}
 			src="/icons/react.svg"
 			width="512"
 			height="512"
 			alt="React"
 		/>
 		<img
-			in:fly={{ duration: 500, x: -200, easing: easing, delay: 1350 }}
+			in:fly={{ duration: 600, y: 300, easing: easing, delay: 1350 }}
 			src="/icons/sass.svg"
 			class="smaller"
 			width="512"

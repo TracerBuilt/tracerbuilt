@@ -3,49 +3,72 @@
 </script>
 
 <script lang="ts">
-	import Projects from '$lib/components/projects.svelte'
+	import Work from '$lib/components/work.svelte'
 	import About from '$lib/components/about.svelte'
 	import Intro from '$lib/components/intro.svelte'
 	import Stack from '$lib/components/stack.svelte'
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte'
+	import Chevron from '$lib/components/chevron.svelte'
+
+	let footerColor = 'var(--white)'
 </script>
 
 <svelte:head>
 	<title>Home</title>
+
+	<style>
+	:root {
+		--footer-color: var(--white);
+		}
+	</style>
 </svelte:head>
 
-<main>
+<div class="main" class:footerColor={footerColor}>
 	<Intro />
-	<IntersectionObserver let:intersecting top={-400}>
+	<IntersectionObserver let:intersecting top={-200}>
 		<div style:min-height={'30rem'}>
 			{#if intersecting}
 				<About />
 			{/if}
 		</div>
 	</IntersectionObserver>
-	<IntersectionObserver let:intersecting top={-500}>
+	<IntersectionObserver let:intersecting top={-200}>
 		<div style:min-height={'5rem'}>
 			{#if intersecting}
 				<Stack />
+			{:else}
+				<div class="chevron-container" style:height={'5rem'}>
+					<Chevron />
+				</div>
 			{/if}
 		</div>
 	</IntersectionObserver>
 
-	<IntersectionObserver let:intersecting top={-500}>
-		<div style:min-height={'40rem'}>
+	<IntersectionObserver let:intersecting top={-300}>
+		<div style:min-height={'30rem'}>
 			{#if intersecting}
-				<Projects />
+				<Work />
+			{:else}
+				<div class="chevron-container" style:height={'20rem'}>
+					<Chevron />
+				</div>
 			{/if}
 		</div>
 	</IntersectionObserver>
 	<div class="swash" />
-</main>
+</div>
 
 <style lang="scss">
-	main {
+	.main {
 		z-index: 2;
-		min-height: 200vh;
 	}
+
+	.chevron-container {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+		}
 
 	.swash {
 		position: absolute;

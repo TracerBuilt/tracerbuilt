@@ -6,13 +6,13 @@
 	import { cubicInOut } from 'svelte/easing'
 </script>
 
-<div class="main">
-	<h2 in:fly={{ duration: 300, x: -200, easing: cubicInOut, delay: 200 }}>Projects</h2>
+<div id="work">
+	<h2 in:fly={{ duration: 300, x: -200, easing: cubicInOut, delay: 200 }}>My Work</h2>
 	<div class="container">
-		<div in:fly={{ duration: 400, x: 200, easing: cubicInOut, delay: 500 }} class="card">
+		<div in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 500 }} class="card">
 			<JeffersonTheatreCompany isBlurb={true} />
 		</div>
-		<div in:fly={{ duration: 400, x: 200, easing: cubicInOut, delay: 1000 }} class="card">
+		<div in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 1000 }} class="card">
 			<NdaEcommerceProject isBlurb={true} />
 		</div>
 	</div>
@@ -20,15 +20,15 @@
 
 <style lang="scss">
 	h2 {
-		text-align: center;
 		margin-bottom: var(--space-0);
 	}
-	.main {
+
+	#work {
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 2rem;
+		margin-top: var(--space-2);
 	}
 
 	.container {

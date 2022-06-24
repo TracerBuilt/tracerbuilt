@@ -30,7 +30,7 @@
 		</div>
 	</a>
 {:else}
-	<main>
+	<div class="main">
 		<h1>Jefferson Theatre Company</h1>
 		<p style:margin-bottom="0">
 			<strong>Stack</strong>: Svelte, Prismic, Snipcart, Google
@@ -78,7 +78,7 @@
 			important to me that they'd need to spend as little as possible of their alreaady limited time
 			keeping the site running.
 		</p>
-	</main>
+	</div>
 {/if}
 
 <style lang="scss">
@@ -95,6 +95,8 @@
 		transition: all 0.2s ease-in-out;
 
 		.blurb-text {
+			padding: 0 var(--space--6);
+
 			@media (min-width: 720px) {
 				padding-left: var(--space--4);
 			}
@@ -135,7 +137,7 @@
 		}
 	}
 
-	main {
+	.main {
 		margin: 0 auto;
 		width: var(--text-block-width);
 

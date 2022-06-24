@@ -25,7 +25,9 @@
 		formattedDate = `
 			${Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(parsedDate)}, the ${getSuffix(
 			parsedDate.getDate()
-		)} of ${Intl.DateTimeFormat('en-US', { month: 'long' }).format(parsedDate)}`
+		)} of ${Intl.DateTimeFormat('en-US', { month: 'long' }).format(
+			parsedDate
+		)}, ${Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(parsedDate)}`
 	})
 </script>
 

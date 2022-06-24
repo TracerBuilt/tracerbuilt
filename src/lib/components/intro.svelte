@@ -1,21 +1,36 @@
+<script>
+	import Chevron from './chevron.svelte'
+
+	let scroll
+</script>
+
+<svelte:window bind:scrollY={scroll} />
+
 <div class="intro">
 	<div class="text">
 		<div class="h4">Hey, my name is</div>
-		<h1>Tyle Ward.</h1>
+		<h1>Tyler Ward.</h1>
 		<div class="h2">
 			I build <span class="fancy-text">cool stuff</span> for the web.
 		</div>
 	</div>
-	<div class="swoosh" />
 </div>
+
+{#if scroll === 0}
+	<div class="chevron">
+		<Chevron />
+	</div>
+{/if}
+
+<div class="swoosh" />
 
 <style lang="scss">
 	.intro {
 		display: flex;
-		height: 100vh;
+		height: 95vh;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-evenly;
 	}
 
 	.text {
@@ -42,6 +57,16 @@
 		background-clip: text;
 		background-image: linear-gradient(135deg, var(--blue-500), var(--red-400));
 		color: transparent;
+	}
+
+	.chevron {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: 0;
+		bottom: 2rem;
+		left: 0;
 	}
 
 	.swoosh {
@@ -73,7 +98,6 @@
 			height: 15rem;
 			background-image: linear-gradient(0deg, hsl(0 0% 100% / 0.25), transparent);
 			clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
-
 		}
 
 		@media (min-width: 960px) {

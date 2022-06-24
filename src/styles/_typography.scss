@@ -1,18 +1,18 @@
 @import '/node_modules/@fontsource/eb-garamond/400.css';
 @import '/node_modules/@fontsource/eb-garamond/variable.css';
 @import '/node_modules/@fontsource/eb-garamond/variable-italic.css';
-@import '/node_modules/@fontsource/cabin/400.css';
-@import '/node_modules/@fontsource/cabin/variable-full.css';
+@import '/node_modules/@fontsource/oswald/400.css';
+@import '/node_modules/@fontsource/oswald/variable.css';
 @import '/node_modules/@fontsource/victor-mono/400.css';
 
 :root {
 	--serif: 'EB Garamond', serif;
-	--sans: 'Cabin', sans-serif;
+	--sans: 'Oswald', sans-serif;
 	--mono: 'Victor Mono', mono;
 
 	@supports (font-variation-settings: normal) {
 		--serif: 'EB GaramondVariable', serif;
-		--sans: 'CabinVariable', sans-serif;
+		--sans: 'OswaldVariable', sans-serif;
 	}
 }
 
@@ -63,7 +63,7 @@ h2,
 	margin: var(--space-0) 0 var(--space--4);
 	font-family: var(--sans);
 	font-size: var(--step-3);
-	font-weight: normal;
+	font-weight: 350;
 	line-height: var(--space-2);
 }
 
@@ -72,7 +72,7 @@ h1,
 	margin: var(--space--4) 0 var(--space--4);
 	font-family: var(--sans);
 	font-size: var(--step-4);
-	font-weight: normal;
+	font-weight: 300;
 	line-height: var(--space-3);
 }
 

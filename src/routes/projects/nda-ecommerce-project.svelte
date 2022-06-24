@@ -17,7 +17,7 @@
 		</div>
 	</a>
 {:else}
-	<main>
+	<div class="main">
 		<h1>NDA Ecommerce Project</h1>
 		<p>
 			<strong>Stack</strong>: Next.js, Typescript, Netlify, Stripe
@@ -56,7 +56,7 @@
 				>s.
 			</li>
 		</ul>
-	</main>
+	</div>
 {/if}
 
 <style lang="scss">
@@ -65,7 +65,6 @@
 	}
 
 	.blurb {
-		padding-left: var(--space--6);
 		display: flex;
 		flex-direction: column;
 		border-radius: 0.2rem;
@@ -87,6 +86,8 @@
 		}
 
 		.blurb-text {
+			padding: 0 var(--space--6);
+
 			h3 {
 				margin-top: 0;
 			}
@@ -105,7 +106,7 @@
 		}
 	}
 
-	main {
+	.main {
 		margin: 0 auto;
 		width: var(--text-block-width);
 

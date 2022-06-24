@@ -22,7 +22,7 @@
 	export let posts
 </script>
 
-<main>
+<div class="main">
 	<h1 style:margin-top="0">Blog</h1>
 	<ul class="post-list">
 		{#each posts as { title, date, tags, outline, slug }}
@@ -48,10 +48,10 @@
 			</li>
 		{/each}
 	</ul>
-</main>
+</div>
 
 <style lang="scss">
-	main {
+	.main {
 		p {
 			max-width: 60ch;
 			white-space: wrap;
