@@ -6,7 +6,12 @@
 </script>
 
 <div id="stack">
-	<h2 in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }}>Stack</h2>
+	<h2
+		in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }}
+		style:align-self={'center'}
+	>
+		Stack
+	</h2>
 	<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 500 }}>
 		Technologies I'm currently enjoying working with.
 	</p>
@@ -63,7 +68,13 @@
 	#stack {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
+		max-width: 60ch;
+		margin: 0 auto;
+
+		@media (min-width: 960px) {
+			max-width: 80ch;
+		}
 	}
 
 	.container {

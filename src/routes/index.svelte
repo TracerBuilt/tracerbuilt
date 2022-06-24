@@ -18,12 +18,12 @@
 
 	<style>
 	:root {
-		--footer-color: var(--white);
+		--footer-color: var(--white) !important;
 		}
 	</style>
 </svelte:head>
 
-<div class="main" class:footerColor={footerColor}>
+<div class="main">
 	<Intro />
 	<IntersectionObserver let:intersecting top={-200}>
 		<div style:min-height={'30rem'}>
@@ -36,10 +36,6 @@
 		<div style:min-height={'5rem'}>
 			{#if intersecting}
 				<Stack />
-			{:else}
-				<div class="chevron-container" style:height={'5rem'}>
-					<Chevron />
-				</div>
 			{/if}
 		</div>
 	</IntersectionObserver>
@@ -48,10 +44,6 @@
 		<div style:min-height={'30rem'}>
 			{#if intersecting}
 				<Work />
-			{:else}
-				<div class="chevron-container" style:height={'20rem'}>
-					<Chevron />
-				</div>
 			{/if}
 		</div>
 	</IntersectionObserver>

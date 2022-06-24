@@ -4,7 +4,7 @@
 </script>
 
 <div id="about">
-			<h2 in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }}>About Me</h2>
+	<h2 in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }}>About Me</h2>
 	<div class="wrapper">
 		<div class="text">
 			<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 400 }}>
@@ -23,7 +23,7 @@
 				and any generally helpful information I feel called to share.
 			</p>
 		</div>
-		<picture in:scale={{ duration: 400, easing: expoInOut, delay: 1000}}>
+		<picture in:scale={{ duration: 400, easing: expoInOut, delay: 1000 }}>
 			<source srcset="/images/profile-picture.webp" type="image/webp" />
 			<source srcset="/images/profile-picture.jpg" type="image/jpeg" />
 			<img
@@ -50,30 +50,31 @@
 
 		@media (min-width: 960px) {
 			flex-direction: row;
-			align-items: center;
+			align-items: flex-start;
 		}
 	}
 
 	h2 {
-			align-self: center;
-			margin-bottom: var(--space-0);
-		}
+		align-self: center;
+		margin-bottom: var(--space-0);
+	}
 
 	picture {
 		display: flex;
 		width: 15rem;
 		height: 15rem;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
 		border: solid 0.1em var(--blue-grey-50);
+		background-color: hsl(0 0% 100% / 0.7);
 		border-radius: 50%;
 		box-shadow: var(--shadow-elevation-medium);
-		background-color: hsl(0 0% 100% / 0.7);
 
 		@supports (backdrop-filter: none) {
-		background-color: hsl(0 0% 100% / 0.2);
-		backdrop-filter: blur(0.5em);
-			}
+			backdrop-filter: blur(0.5em);
+			background-color: hsl(0 0% 100% / 0.2);
+		}
 
 		@media (min-width: 420px) {
 			width: 20rem;

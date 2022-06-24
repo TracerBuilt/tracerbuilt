@@ -72,7 +72,7 @@
 	.swoosh {
 		z-index: -1;
 		position: absolute;
-		top: 60vh;
+		top: 50vh;
 		right: 0;
 		width: 10rem;
 		height: 30rem;
