@@ -1,6 +1,6 @@
 <div class="main">
 	<h1>Get In Touch</h1>
-	<p><code>tyler@tracerbuilt.dev</code></p>
+	<p><a href="mailto: tyler@tracerbuilt.dev">tyler@tracerbuilt.dev</a></p>
 </div>
 
 <style lang="scss">
@@ -17,8 +17,15 @@
 		margin-top: var(--space-0);
 	}
 
-	code {
-		background: none;
+	a {
+		color: var(--blue-600);
 		font-size: var(--step-1);
+		font-family: var(--mono);
+		text-decoration: none;
+
+		&:hover {
+
+color: var(--blue-400);
+			}
 	}
 </style>
