@@ -2,7 +2,7 @@
 	import Fork from '$lib/components/icons/fork.svelte'
 	import Star from '$lib/components/icons/star.svelte'
 	const url = 'https://api.github.com/repos/TracerBuilt/tracerbuilt'
-	let stars
+	let stars: number
 	let forks: number
 
 	fetch(url, { headers: { 'Content-Type': 'application/json' } })
@@ -52,6 +52,7 @@
 	.icons {
 		display: flex;
 		color: inherit;
+		fill: inherit;
 		gap: var(--space--4);
 		text-decoration: none;
 	}
@@ -59,6 +60,8 @@
 	.icon {
 		display: flex;
 		align-items: center;
+		color: inherit;
+		fill: inherit;
 		gap: var(--space--7);
 	}
 </style>
