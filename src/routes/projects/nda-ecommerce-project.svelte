@@ -86,7 +86,7 @@
 		}
 
 		.blurb-text {
-			padding: 0 var(--space--6);
+			padding: var(--space--6);
 
 			h3 {
 				margin-top: 0;
@@ -111,8 +111,6 @@
 		width: var(--text-block-width);
 
 		h1 {
-			display: inline;
-			margin: 0;
 			background-clip: text;
 			background-image: linear-gradient(45deg, var(--blue-500), var(--red-400));
 			color: transparent;

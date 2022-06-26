@@ -38,7 +38,7 @@ specifiers:
   stylelint-config-standard-scss: ^4.0.0
   stylelint-order: ^5.0.0
   svelte: ^3.48.0
-  svelte-check: ^2.7.2
+  svelte-check: ^2.8.0
   svelte-preprocess: ^4.10.7
   tslib: ^2.4.0
   typescript: ^4.7.4
@@ -86,7 +86,7 @@ devDependencies:
   stylelint-config-standard-scss: 4.0.0_uyk3cwxn3favstz4untq233szu
   stylelint-order: 5.0.0_stylelint@14.9.1
   svelte: 3.48.0
-  svelte-check: 2.7.2_wtf3ac63jung5m7cr7paxv7s6u
+  svelte-check: 2.8.0_wtf3ac63jung5m7cr7paxv7s6u
   svelte-preprocess: 4.10.7_k2aip5inc5bkmwqpiwgq46tuza
   tslib: 2.4.0
   typescript: 4.7.4
@@ -755,7 +755,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001359
-      electron-to-chromium: 1.4.169
+      electron-to-chromium: 1.4.170
       node-releases: 2.0.5
       update-browserslist-db: 1.0.4_browserslist@4.21.0
     dev: true
@@ -1158,8 +1158,8 @@ packages:
       domhandler: 4.3.1
     dev: true
 
-  /electron-to-chromium/1.4.169:
-    resolution: {integrity: sha512-Yb7UFva1sLlAaRyCkgoFF3qWvwZacFDtsGKi44rZsk8vnhL0DMhsUdhI4Dz9CCJQfftncDMGSI3AYiDtg8mD/w==}
+  /electron-to-chromium/1.4.170:
+    resolution: {integrity: sha512-rZ8PZLhK4ORPjFqLp9aqC4/S1j4qWFsPPz13xmWdrbBkU/LlxMcok+f+6f8YnQ57MiZwKtOaW15biZZsY5Igvw==}
     dev: true
 
   /emoji-regex/8.0.0:
@@ -3823,8 +3823,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.7.2_wtf3ac63jung5m7cr7paxv7s6u:
-    resolution: {integrity: sha512-TuVX4YtXHbRM8sVuK5Jk+mKWdm3f0d6hvAC6qCTp8yUszGZewpEBCo2V5fRWZCiz+0J4OCiDHOS+DFMxv39rJA==}
+  /svelte-check/2.8.0_wtf3ac63jung5m7cr7paxv7s6u:
+    resolution: {integrity: sha512-HRL66BxffMAZusqe5I5k26mRWQ+BobGd9Rxm3onh7ZVu0nTk8YTKJ9vu3LVPjUGLU9IX7zS+jmwPVhJYdXJ8vg==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0

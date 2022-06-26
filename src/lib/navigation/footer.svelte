@@ -15,7 +15,7 @@
 
 <footer>
 	<p>Created by Tyler Ward</p>
-	<div class="icons">
+	<a href="https://github.com/TracerBuilt/tracerbuilt" class="icons">
 		<div class="icon">
 			<Star width="var(--step--2)" />
 			{stars}
@@ -24,7 +24,7 @@
 			<Fork width="var(--step--2)" />
 			{forks}
 		</div>
-	</div>
+	</a>
 </footer>
 
 <style lang="scss">
@@ -51,7 +51,9 @@
 
 	.icons {
 		display: flex;
+		color: inherit;
 		gap: var(--space--4);
+		text-decoration: none;
 	}
 
 	.icon {

@@ -90,12 +90,11 @@
 		display: flex;
 		width: 100%;
 		flex-direction: column;
-		border-radius: 0.2rem;
 		color: var(--text);
 		transition: all 0.2s ease-in-out;
 
 		.blurb-text {
-			padding: 0 var(--space--6);
+			padding: var(--space--6);
 
 			@media (min-width: 720px) {
 				padding-left: var(--space--4);
@@ -123,7 +122,6 @@
 			img {
 				width: 100%;
 				height: auto;
-				border-radius: 0.2rem;
 			}
 
 			@media (min-width: 720px) {
@@ -142,8 +140,6 @@
 		width: var(--text-block-width);
 
 		h1 {
-			display: inline;
-			margin: 0;
 			background-clip: text;
 			background-image: linear-gradient(45deg, var(--blue-500), var(--red-400));
 			color: transparent;

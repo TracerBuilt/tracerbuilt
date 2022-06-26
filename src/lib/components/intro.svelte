@@ -10,7 +10,7 @@
 	<div class="text">
 		<div class="h4">Hey, my name is</div>
 		<h1>Tyler Ward.</h1>
-		<div class="h2">
+		<div class="h3">
 			I build <span class="fancy-text">cool stuff</span> for the web.
 		</div>
 	</div>
@@ -27,14 +27,14 @@
 <style lang="scss">
 	.intro {
 		display: flex;
-		height: 95vh;
+		height: calc(100vh - 3rem - var(--space--6));
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
 	}
 
 	.text {
-		margin-top: -10rem;
+		margin-top: -3rem;
 		text-align: left;
 	}
 
@@ -43,13 +43,11 @@
 	}
 
 	h1 {
-		margin-top: 0;
-		margin-bottom: 0;
+		margin: calc(var(--step-5) * 0.2) 0;
 	}
 
-	.h2 {
-		margin-top: 0;
-		margin-bottom: 0;
+	.h3 {
+		margin: 0;
 		color: var(--blue-grey-500);
 	}
 

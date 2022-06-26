@@ -8,7 +8,7 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <header>
-	<a on:click={() => (open = false)} class="h2" href="/"> tracerbuilt </a>
+	<a on:click={() => (open = false)} class="h3" href="/"> tracerbuilt </a>
 	<Nav bind:open />
 </header>
 
@@ -16,6 +16,7 @@
 	header {
 		display: flex;
 		width: 100%;
+		height: 3rem;
 		z-index: 15;
 		align-items: baseline;
 		justify-content: space-between;

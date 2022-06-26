@@ -8,19 +8,13 @@
 	<div class="wrapper">
 		<div class="text">
 			<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 400 }}>
-				I'm Tyler, I have always loved technology, and even studied computer engineering in college,
-				but nothing I created in C or Java ever felt tangible enough. I left school, and moved to
-				New York for five years before relocating to the Twin Cities during the pandemic, where I
-				discovered my love of creating things for the web.
+				I'm Tyler, I have always loved technology, and even studied computer engineering in college
+				for a bit, before leaving to move to New York. Five years later I relocated to the Twin
+				Cities during the pandemic, where I discovered my love of creating things for the web.
 			</p>
 			<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 600 }}>
-				I've created a few completely custom ecommerce sites, a bespoke site for a local, non-profit
-				theater company, and more silly side projects than I care to mention.
-			</p>
-			<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 800 }}>
-				And then there's this site itself, which should serve as an excellent example of the sort of
-				things I'm enjoying working with at the moment, interesting problems I've found to solve,
-				and any generally helpful information I feel called to share.
+				I've been working as a freelance developer for two years now, creating everything from
+				simple contact forms to complete ecommerce platforms built entirely from scratch.
 			</p>
 		</div>
 		<picture in:scale={{ duration: 400, easing: expoInOut, delay: 1000 }}>
@@ -74,11 +68,6 @@
 		@supports (backdrop-filter: none) {
 			backdrop-filter: blur(0.5em);
 			background-color: hsl(0 0% 100% / 0.2);
-		}
-
-		@media (min-width: 420px) {
-			width: 20rem;
-			height: 20rem;
 		}
 	}
 

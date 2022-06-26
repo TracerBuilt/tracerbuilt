@@ -28,21 +28,20 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: var(--space-2);
+		margin: var(--space-2) 0 var(--space-6);
 	}
 
 	.container {
 		display: flex;
 		max-width: 50rem;
 		flex-direction: column;
-		gap: var(--space-0);
+		gap: var(--space-3);
 	}
 
 	.card {
 		z-index: 2;
 		width: 100%;
 		background: var(--white);
-		border-radius: 0.2rem;
 		box-shadow: var(--shadow-elevation-medium);
 	}
 </style>

@@ -5,7 +5,10 @@
 	export let open = false
 	let windowWidth: number
 
-	const routes = [{ path: '/blog', text: 'Blog' }]
+	const routes = [
+		{ path: '/blog', text: 'Blog' },
+		{ path: '/contact', text: 'Contact'}
+	]
 
 	let scrollable = true
 
@@ -51,17 +54,20 @@
 	<NavIcon bind:open />
 	{#if open}
 		<div class="overlay" on:click={() => (open = false)} transition:fade={{ duration: 300 }}>
-			<div class="sidebar" class:open transition:fly={{ duration: 300, x: 700, opacity: 0.5 }}>
+			<nav class="sidebar" class:open transition:fly={{ duration: 300, x: 700, opacity: 0.5 }}>
 				<ul>
-					<li in:fly={{ duration: 300, x: 200, delay: 100 }}>
-						<div class="hover-wrapper">
-							<a href="/blog" on:click={() => (open = false)}
-								>{#each 'Blog' as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
-										>{letter}</span
-									>{/each}</a
-							>
-						</div>
-					</li>
+					{#each routes as route, i}
+						<li in:fly={{ duration: 300, x: 200, delay: 100 + i * 100 }}>
+							<div class="hover-wrapper">
+								<a href={route.path} on:click={() => (open = false)}
+									>{#each route.text as letter, j}<span
+											class="letter"
+											style="animation-delay: {j / 20}s;">{letter}</span
+										>{/each}</a
+								>
+							</div>
+						</li>
+					{/each}
 					<li class="image" in:fly={{ duration: 300, x: 200, delay: 200 }}>
 						<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a
 						>
@@ -77,20 +83,22 @@
 						>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</div>
 	{/if}
 {:else}
 	<ul>
-		<li in:fly={{ duration: 300, x: 200, delay: 100 }}>
-			<div class="hover-wrapper">
-				<a href="/blog" on:click={() => (open = false)}
-					>{#each 'Blog' as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
-							>{letter}</span
-						>{/each}</a
-				>
-			</div>
-		</li>
+		{#each routes as route, i}
+			<li in:fly={{ duration: 300, x: 200, delay: 100 + i * 100 }}>
+				<div class="hover-wrapper">
+					<a href={route.path} on:click={() => (open = false)}
+						>{#each route.text as letter, j}<span class="letter" style="animation-delay: {j / 20}s;"
+								>{letter}</span
+							>{/each}</a
+					>
+				</div>
+			</li>
+		{/each}
 		<li class="image" in:fly={{ duration: 300, x: 200, delay: 200 }}>
 			<a href="https://github.com/TracerBuilt"><img src="/icons/github.svg" alt="Github" /></a>
 		</li>
@@ -114,7 +122,6 @@
 	}
 
 	li {
-		margin: var(--space--6) 0;
 		line-height: var(--space-0);
 	}
 
@@ -122,15 +129,16 @@
 		margin-top: 0;
 	}
 
+	a {
+		font-family: var(--sans);
+		font-weight: 300;
+	}
+
 	@media (min-width: 960px) {
 		ul {
 			display: flex;
 			align-items: baseline;
 			gap: var(--space-0);
-		}
-
-		li {
-			margin: 0;
 		}
 
 		.image a {
@@ -157,18 +165,14 @@
 	}
 	a {
 		color: var(--text);
-		font-size: var(--step-2);
+		font-size: var(--step-1);
 		text-decoration: none;
 		transition: all 0.5s ease;
 	}
 
-	.image {
-		margin: var(--space--4) 0;
-	}
-
 	img {
-		width: var(--space-0);
-		height: var(--space-0);
+		width: var(--step-1);
+		height: var(--step-1);
 		transition: 0.1s ease-in-out;
 
 		&:hover {
@@ -202,17 +206,21 @@
 			}
 
 			a {
-				font-size: var(--step-4);
+				font-size: var(--step-3);
 			}
 
 			li {
-				margin: var(--space--2) var(--space--2);
+				margin: var(--space--2);
 				line-height: var(--space-1);
 			}
 
 			img {
-				width: var(--space-1);
-				height: var(--space-1);
+				width: var(--step-2);
+				height: var(--step-2);
+			}
+
+			.image {
+				margin: var(--space--6) var(--space--2);
 			}
 		}
 	}

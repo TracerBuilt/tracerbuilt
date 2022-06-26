@@ -17,8 +17,8 @@
 	<title>Home</title>
 
 	<style>
-	:root {
-		--footer-color: var(--white) !important;
+		:root {
+			--footer-color: var(--white) !important;
 		}
 	</style>
 </svelte:head>
@@ -26,7 +26,7 @@
 <div class="main">
 	<Intro />
 	<IntersectionObserver let:intersecting top={-200}>
-		<div style:min-height={'30rem'}>
+		<div id="about" style:min-height={'20rem'}>
 			{#if intersecting}
 				<About />
 			{/if}
@@ -41,7 +41,7 @@
 	</IntersectionObserver>
 
 	<IntersectionObserver let:intersecting top={-300}>
-		<div style:min-height={'30rem'}>
+		<div id="work" style:min-height={'30rem'}>
 			{#if intersecting}
 				<Work />
 			{/if}
@@ -56,11 +56,11 @@
 	}
 
 	.chevron-container {
-			display: flex;
-			width: 100%;
-			align-items: center;
-			justify-content: center;
-		}
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
 
 	.swash {
 		position: absolute;

@@ -31,6 +31,15 @@ body,
 	line-height: var(--space-0);
 }
 
+h6, .h6 {
+
+	margin: var(--space--2) 0 var(--space--6);
+	font-family: var(--sans);
+	font-size: var(--step--1);
+	font-weight: normal;
+	line-height: var(--space-0);
+}
+
 h5,
 .h5 {
 	margin: var(--space--2) 0 var(--space--6);
@@ -45,7 +54,7 @@ h4,
 	margin: var(--space--2) 0 var(--space--6);
 	font-family: var(--sans);
 	font-size: var(--step-1);
-	font-weight: normal;
+	font-weight: 370;
 	line-height: var(--space-0);
 }
 
@@ -54,7 +63,7 @@ h3,
 	margin: var(--space--2) 0 var(--space--6);
 	font-family: var(--sans);
 	font-size: var(--step-2);
-	font-weight: normal;
+	font-weight: 350;
 	line-height: var(--space-1);
 }
 
@@ -63,7 +72,7 @@ h2,
 	margin: var(--space-0) 0 var(--space--4);
 	font-family: var(--sans);
 	font-size: var(--step-3);
-	font-weight: 350;
+	font-weight: 320;
 	line-height: var(--space-2);
 }
 
