@@ -2,9 +2,9 @@
 	"name": "tracerbuilt",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"preview": "svelte-kit preview",
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -47,16 +47,16 @@
 		"stylelint-config-css-modules": "^4.1.0",
 		"stylelint-config-idiomatic-order": "^8.1.0",
 		"stylelint-config-prettier": "^9.0.3",
-		"stylelint-config-standard-scss": "^4.0.0",
+		"stylelint-config-standard-scss": "^5.0.0",
 		"stylelint-order": "^5.0.0",
 		"svelte": "^3.48.0",
 		"svelte-check": "^2.8.0",
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.0",
 		"typescript": "^4.7.4",
-		"vite": "^2.9.12",
+		"vite": "^3.0.4",
 		"vite-plugin-wasm-pack": "^0.1.12",
-		"vitest": "^0.16.0"
+		"vitest": "^0.20.3"
 	},
 	"type": "module",
 	"dependencies": {
@@ -65,6 +65,7 @@
 		"@fontsource/fira-code": "^4.5.10",
 		"@fontsource/fira-mono": "^4.5.8",
 		"@fontsource/playfair-display": "^4.5.10",
-		"@lukeed/uuid": "^2.0.0"
+		"@lukeed/uuid": "^2.0.0",
+		"posthog-js": "^1.28.0"
 	}
 }
