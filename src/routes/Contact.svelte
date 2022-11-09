@@ -6,11 +6,10 @@
 
 <div in:fade class="dark:text-grey-3 dark:bg-grey-10 body-font relative">
 	<form
-		method="POST"
 		name="Contact"
+		method="POST"
 		data-netlify="true"
 		netlify-honeypot="bot-field"
-		action="/contact/success"
 		class="container px-5 py-24 mx-auto"
 	>
 		<input type="hidden" name="form-name" value="Contact" />
