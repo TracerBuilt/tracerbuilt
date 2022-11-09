@@ -9,7 +9,7 @@
 			<source srcset="/images/jefferson-home-desktop.webp" type="image/webp" />
 			<source srcset="/images/jefferson-home-desktop.jpg" type="image/jpeg" />
 			<img
-				src="/images/jefferson-theatre-company.jpg"
+				src="/images/jefferson-home-desktop.jpg"
 				alt="Home page of the Jefferson Theatre Company website on desktop"
 				width="2540"
 				height="1420"

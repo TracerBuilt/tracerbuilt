@@ -9,7 +9,7 @@
 			<source srcset="/images/atlas-home-desktop.webp" type="image/webp" />
 			<source srcset="/images/atlas-home-desktop.jpg" type="image/jpeg" />
 			<img
-				src="/images/atlas-theatre-company.jpg"
+				src="/images/atlas-home-desktop.jpg"
 				alt="Home page of the Atlas website on desktop"
 				width="2540"
 				height="1420"
