@@ -13,7 +13,9 @@
 </script>
 
 <div class="mx-2">
-	<header class="flex max-w-4xl mb-6 mt-2 px-1 mx-auto h-[3rem] z-20 items-baseline justify-between">
+	<header
+		class="flex max-w-4xl mb-6 mt-2 px-1 mx-auto h-[3rem] z-20 items-baseline justify-between"
+	>
 		<a href="/" class="font-mono text-xl"> tracerbuilt </a>
 		<nav class="flex justify-end flex-wrap gap-2 sm:gap-4 ml-4">
 			<div class="flex gap-2 sm:gap-4">

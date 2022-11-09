@@ -3,8 +3,7 @@
 	import { cubicInOut, expoInOut } from 'svelte/easing'
 </script>
 
-<section
-	id="about"
+<div
 	in:fly={{ duration: 400, x: -200, easing: cubicInOut }}
 	class="text-center dark:text-grey-3 text-grey-1 w-screen bg-gradient-to-br from-blue-9 via-purple-9 pb-12 pt-4 -skew-y-3 to-red-9 -mx-2 mb-16 dark:from-blue-11 dark:via-purple-11 dark:to-red-11"
 >
@@ -43,4 +42,4 @@
 			</picture>
 		</div>
 	</div>
-</section>
+</div>

@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-	export const prerender = true
-</script>
-
 <script lang="ts">
 	import Work from './Work.svelte'
 	import About from './About.svelte'
@@ -24,39 +20,39 @@
 <div class="mx-2">
 	<Intro />
 	<IntersectionObserver let:intersecting top={-300}>
-		<div id="work" style:min-height={'30rem'}>
+		<section id="work" style:min-height={'30rem'}>
 			{#if intersecting}
 				<Work />
 			{:else}
 				<div class="h-screen" />
 			{/if}
-		</div>
+		</section>
 	</IntersectionObserver>
 	<IntersectionObserver let:intersecting top={-200}>
-		<div id="about" style:min-height={'20rem'}>
+		<section id="about" style:min-height={'20rem'}>
 			{#if intersecting}
 				<About />
 			{:else}
 				<div class="h-screen" />
 			{/if}
-		</div>
+		</section>
 	</IntersectionObserver>
 	<IntersectionObserver let:intersecting top={-200}>
-		<div style:min-height={'5rem'}>
+		<section id="stack" style:min-height={'5rem'}>
 			{#if intersecting}
 				<Stack />
 			{:else}
 				<div class="h-screen" />
 			{/if}
-		</div>
+		</section>
 	</IntersectionObserver>
 	<IntersectionObserver let:intersecting top={-200}>
-		<div style:min-height={'5rem'}>
+		<section id="contact" style:min-height={'5rem'}>
 			{#if intersecting}
 				<Contact />
 			{:else}
 				<div class="h-screen" />
 			{/if}
-		</div>
+		</section>
 	</IntersectionObserver>
 </div>

@@ -6,16 +6,21 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<div class="flex relative z-10 text-4xl h-[calc(100vh-6rem)] mb-12 flex-col items-center justify-center">
+<section
+	class="flex relative z-10 text-4xl h-[calc(100vh-6rem)] mb-12 flex-col items-center justify-center"
+>
 	<div class="">
-		<h1 before="Hey, I'm Tyler" class={`relative leading-0 before:w-full before:content-[attr(before)] before:h-16 before:left-0 before:-top-8 before:text-grey-9 before:dark:text-grey-4 before:text-xl before:block before:absolute`}>
+		<h1
+			before="Hey, I'm Tyler"
+			class={`relative leading-0 before:w-full before:content-[attr(before)] before:h-16 before:left-0 before:-top-8 before:text-grey-9 before:dark:text-grey-4 before:text-xl before:block before:absolute`}
+		>
 			I build <span
 				class="bg-clip-text justify-self-center bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 text-transparent animate-move-bg bg-400%"
 				>cool stuff</span
 			> for the web.
 		</h1>
 	</div>
-</div>
+</section>
 
 {#if scroll === 0}
 	<div class="fixed flex right-0 bottom-4 left-0 justify-center items-center">

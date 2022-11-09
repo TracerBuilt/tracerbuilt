@@ -5,7 +5,7 @@
 	const easing = cubicInOut
 </script>
 
-<section id="stack" class="text-center mb-16">
+<div class="text-center mb-16">
 	<h2 in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }} class="text-3xl">
 		Stack
 	</h2>
@@ -34,4 +34,4 @@
 			<figcaption>React</figcaption>
 		</figure>
 	</div>
-</section>
+</div>

@@ -1,51 +1,10 @@
 <script lang="ts">
-	import { Map, View } from 'ol'
-	import { OSM } from 'ol/source'
-	import { Tile as TileLayer } from 'ol/layer'
-	import { useGeographic } from 'ol/proj'
-	import { defaults as defaultControls } from 'ol/control'
-	import { defaults as defaultInteractions } from 'ol/interaction'
-	import { onMount } from 'svelte'
 	import { fade } from 'svelte/transition'
 
-	export let loading = false
-
-	const place = [-93, 44.9397]
-	let map
-	let view
-
-	onMount(() => {
-		useGeographic()
-
-		view = new View({
-			center: place,
-			zoom: 10
-		})
-
-		map = new Map({
-			target: 'map',
-			controls: defaultControls({ attribution: false, rotate: false, zoom: false }),
-			interactions: defaultInteractions({
-				altShiftDragRotate: false,
-				doubleClickZoom: false,
-				keyboard: false,
-				mouseWheelZoom: false,
-				shiftDragZoom: false,
-				dragPan: false,
-				pinchRotate: false,
-				pinchZoom: false
-			}),
-			view: view,
-			layers: [
-				new TileLayer({
-					source: new OSM()
-				})
-			]
-		})
-	})
+	let loading = false
 </script>
 
-<section id="contact" in:fade class="dark:text-grey-3 dark:bg-grey-10 body-font relative">
+<div in:fade class="dark:text-grey-3 dark:bg-grey-10 body-font relative">
 	<form
 		method="POST"
 		name="Contact"
@@ -190,4 +149,4 @@
 			</div>
 		</div>
 	</form>
-</section>
+</div>

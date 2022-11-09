@@ -7,7 +7,7 @@
 	import { cubicInOut } from 'svelte/easing'
 </script>
 
-<div id="work" class="relative z-10 text-center mb-16">
+<section id="work" class="relative z-10 text-center mb-16">
 	<h2
 		class="text-3xl w-11/12 mx-auto mb-12"
 		in:fly={{ duration: 300, x: -200, easing: cubicInOut, delay: 100 }}
@@ -25,4 +25,4 @@
 			<Nda_Blurb />
 		</div>
 	</div>
-</div>
+</section>
