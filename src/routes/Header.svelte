@@ -3,7 +3,7 @@
 	const routes = [
 		{ path: '/#work', text: 'Work' },
 		{ path: '/#about', text: 'About' },
-		{ path: '/#contact', text: 'Contact' }
+		{ path: '/#get_in_touch', text: 'Contact' }
 	]
 	const links = [
 		{ href: 'https://github.com/TracerBuilt', src: '/icons/github.svg', alt: 'Github' },
