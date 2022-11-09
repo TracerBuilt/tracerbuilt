@@ -8,7 +8,7 @@
 	<form
 		name="Contact"
 		method="POST"
-		data-netlify="true"
+		netlify
 		netlify-honeypot="bot-field"
 		class="container px-5 py-24 mx-auto"
 	>
