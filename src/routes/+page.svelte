@@ -47,12 +47,18 @@
 		</section>
 	</IntersectionObserver>
 	<IntersectionObserver let:intersecting top={-200}>
-		<section id="get_in_touch" style:min-height={'5rem'}>
-			{#if intersecting}
-				<Contact />
-			{:else}
-				<div class="h-screen" />
-			{/if}
+		<section id="contact" style:min-height={'5rem'}>
+			<form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+				<input type="hidden" name="form-name" value="Contact" />
+				<label class="hidden">
+					Don’t fill this out if you’re human: <input name="bot-field" />
+				</label>
+				{#if intersecting}
+					<Contact />
+				{:else}
+					<div class="h-screen" />
+				{/if}
+			</form>
 		</section>
 	</IntersectionObserver>
 </div>
