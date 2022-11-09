@@ -2,7 +2,6 @@ import preprocess from 'svelte-preprocess'
 import netlify from '@sveltejs/adapter-netlify'
 import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
-import wasmPack from 'vite-plugin-wasm-pack'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,13 +9,12 @@ const config = {
 	preprocess: [
 		mdsvex(mdsvexConfig),
 		preprocess({
-			postcss: true,
-			scss: true
+			postcss: true
 		})
 	],
 
 	kit: {
-		adapter: netlify(),
+		adapter: netlify()
 	}
 }
 

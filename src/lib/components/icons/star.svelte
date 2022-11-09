@@ -1,14 +1,13 @@
 <script lang="ts">
-	export let color = 'var(--text)'
-	export let width = '24px'
-
+	let class_name = ''
+	export { class_name as class }
 	const label = 'Github stars'
 </script>
 
 <svg
 	role="img"
 	aria-label={label}
-	style:width
+	class={class_name}
 	xmlns="http://www.w3.org/2000/svg"
 	width="24"
 	height="24"

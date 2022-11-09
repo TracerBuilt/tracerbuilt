@@ -1,23 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition'
-	import { tweened } from 'svelte/motion'
 	import { cubicInOut } from 'svelte/easing'
-	import { onMount } from 'svelte'
-
-	const pulse = tweened(0.3, {
-		duration: 1600,
-		easing: cubicInOut
-	})
-
-	const loop = () =>
-		pulse
-			.set(0.3)
-			.then(() => pulse.set(0.5))
-			.then(() => loop())
-
-	onMount(() => {
-		loop()
-	})
 </script>
 
 <svg
@@ -32,17 +15,11 @@
 	xml:space="preserve"
 	in:fade={{ duration: 1600, delay: 2000, easing: cubicInOut }}
 	out:fade={{ duration: 200, easing: cubicInOut }}
+	class="w-12 animate-pulse fill-grey-9"
 >
 	<g>
 		<polygon
-			style:fill={`hsl(0 0% 10% / ${$pulse})`}
 			points="203.718,322.929 21.179,140.984 0,162.232 203.718,365.287 407.437,162.232 386.258,140.984 	"
 		/>
 	</g>
 </svg>
-
-<style lang="scss">
-	svg {
-		width: 3rem;
-	}
-</style>

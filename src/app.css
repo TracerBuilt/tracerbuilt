@@ -1,0 +1,26 @@
+@import '/node_modules/@fontsource/eb-garamond/400.css';
+@import '/node_modules/@fontsource/eb-garamond/variable.css';
+@import '/node_modules/@fontsource/eb-garamond/variable-italic.css';
+@import '/node_modules/@fontsource/oswald/400.css';
+@import '/node_modules/@fontsource/oswald/variable.css';
+@import '/node_modules/@fontsource/victor-mono/400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply h-full text-base antialiased;
+	}
+
+	body {
+		@apply bg-grey-1/100 text-grey-11/100 dark:bg-grey-11/100 dark:text-grey-1/100 relative flex h-full flex-col text-base;
+	}
+}
+
+@layer utilities {
+	.clip-path {
+		clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+	}
+}

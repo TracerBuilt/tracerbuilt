@@ -1,0 +1,271 @@
+---
+title: 'A Shiny SvelteKit Blog'
+outline: 'Creating a simple markdown blog with SvelteKit, Typescript, PostCSS, and mdsvex'
+tags: ['Svelte', 'SvelteKit', 'Typescript', 'mdsvex', 'PostCSS', 'Markdown']
+date: '2021-6-20'
+---
+
+This post will cover a fast and simple way to set up a basic blog using SvelteKit. The first step is to create a new SvelteKit app, following the instructions from [their documentation](https://kit.svelte.dev/docs#introduction-getting-started), let's start with:
+
+```bash
+npm init svelte@next shiny-blog
+```
+
+You will be prompted with a few options during the process. For the purposes of following along with me, select the `SvelteKit demo app` option, as well as enabling TypeScript. The ESLint and Prettier options are up to you, but I would definitely recommend both.
+
+After this finishes (it really shouldn't take more than a few seconds), enter the following commands in your terminal:
+
+```bash
+cd shiny-blog
+pnpm install
+pnpm dev
+```
+
+By now you've spun up a development server with a fresh SvelteKit site, you should be able to see if by hitting `localhost:3000` in your browser. Not much to look at just yet, but check out that counter! Plus, Svelte and TypeScript are already set up for us out-of-the-box, which is most excellent. It's like we're halfway there already!
+
+## Setting up PostCSS
+
+This is just about the easiest part of this whole process, thanks to [Svelte Add](https://github.com/svelte-add/svelte-add). Make sure you're still in your site's directory in your terminal, and type:
+
+```bash
+pnpx svelte-add postcss
+```
+
+And that's it! PostCSS is all set up, although if you have other plugins you'd like to use besides autoprefixer, you'll need to make some modifications to the newly created `postcss.config.cjs` file in the root directory of your site. For the purposes of this guide, we're going to add a few, just to see how it works. Let's go back to the terminal and run:
+
+```bash
+pnpm i -D postcss-custom-properties postcss-nesting 
+```
+
+Then, we'll add them into the plugin configuration in our `postcss.config.cjs`, it should end up looking like this:
+
+```js
+const autoprefixer = require('autoprefixer');
+const customProperties = require('postcss-custom-properties');
+const nesting = require('postcss-nesting');
+
+const config = {
+	plugins: [autoprefixer, customProperties, nesting]
+};
+
+module.exports = config;
+```
+
+Svelte Add handles the rest of the configuration, so now we can jump straight into implementing Markdown.
+
+## Adding Markdown Support with mdsvex
+
+First things first, we'll need to grab a copy of [mdsvex](https://mdsvex.com/), an excellent Markdown preprocessor that allows you to write Svelte code in your Markdown files, and to use those files as Svelte components as well. I find this a lot simpler and easier than your usual smattering of tools like `gray-matter` or `marked` (not that these aren't great at what they do). Head back to the terminal and type this:
+
+```bash
+pnpm i -D mdsvex
+touch mdsvex.config.js
+```
+
+### Configuring mdsvex
+
+Now we'll go back to our text editor and add some stuff to our newly created `mdsvex.config.js` file. The bare minimum we need for this to work is:
+
+```js
+const config = {
+	extensions: ['.svx', '.md']
+}
+
+export default config
+```
+
+This will tell mdsvex which file extensions we want to use, and we'll be sticking with the standard (for mdsvex) `.svx` and `.md` extensions. This is also where you'll add any other configuration options you'd like for mdsvex, which if you're like me, includes some fancy-ing up of the typography:
+
+```js
+const config = {
+	extensions: ['.svx', '.md'],
+	smartypants: {
+		quotes: true,
+		ellipses: true,
+		backticks: false,
+		dashes: 'oldschool'
+	}
+}
+
+export default config
+```
+
+`smartypants` is a collection of options for things _everyone_ should be using, like real typographer's quotes, ellipses characters, and em- and en-dashes.
+
+### Configuring SvelteKit
+
+Next we'll need to tell SvelteKit to use mdsvex to process our Markdown files, so open up `svelte.config.js` in your text editor. It should look something like this:
+
+```js
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: [
+		preprocess({
+			postcss: true
+		})
+	],
+
+	kit: {
+		adapter: adapter(),
+
+	}
+};
+
+export default config;
+```
+
+We need to add a few imports at the top:
+
+```js
+import { mdsvex } from 'mdsvex'
+import mdsvexConfig from './mdsvex.config.js'
+```
+
+and a few things to the config itself:
+
+```js
+extensions: ['.svelte', ...mdsvexConfig.extensions],
+```
+
+and
+
+```js
+preprocess: [
+   mdsvex(mdsvexConfig),
+   preprocess({
+        "postcss": true
+    })
+],
+```
+
+so that your file should eventually look like this:
+
+```js
+import adapter from '@sveltejs/adapter-auto';
+import { mdsvex } from 'mdsvex';
+import mdsvexConfig from './mdsvex.config.js';
+import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
+	preprocess: [
+		mdsvex(mdsvexConfig),
+		preprocess({
+			postcss: true
+		})
+	],
+
+	kit: {
+		adapter: adapter(),
+
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte',
+
+		// Override http methods in the Todo forms
+		methodOverride: {
+			allowed: ['PATCH', 'DELETE']
+		}
+	}
+};
+
+export default config;
+
+```
+
+### Write Some Markdown
+
+Now we'll need to add a `.svx` file, to see the fruits of our labors. Create a new folder in `routes` called `blog`, and add a file called `my-first-blog-post.svx`. Then, add whatever sort of thing you'd like, or copy this example, complete with a svelte component to show off the greatness that is mdsvex:
+
+```svelte
+---
+frontmatter: Look!
+someMore: You can add any old frontmatter here, and access it as a prop
+title: My First Blog Post
+tags: ['cool', 'nifty', 'neat', 'radical']
+outline: This is a small blurb, explaining what the post is about
+---
+
+<script lang="ts">
+	import Counter from '$lib/Counter.svelte'
+</script>
+
+# A Sweet Blog Post
+
+Now we can write in Markdown and still use all of our Svelte components, like this:
+
+<Counter />
+
+```
+
+You'll probably need to restart your dev server after fiddling with the config, but once you do, head on over to `/blog/test` and revel in the ugly glory that is your now working blog!
+
+![Success! Our working blog page](/images/mdsvex-example-image.jpg)
+
+## Add a List of Posts
+
+Arguably the last big step in having a fully functioning blog is adding a blog page itself, which lists your posts. In your `blog/` folder, add an `index.svelte` file.
+
+We need to get all of our blog posts (Svelte makes this super simple with `import.meta.glob()`), and iterate over each of them, generating slugs without the `.svx` file extension. Then we'll export these as static props in the `load()` function and iterate over them again, creating links for each of them. Go ahead and paste in the following code:
+
+```svelte
+
+<script lang="ts" context="module">
+	const getPosts = import.meta.glob('./*.svx')
+	let body = []
+	for (const path in getPosts) {
+		const post = getPosts[path]().then(({ metadata }) => {
+			return { ...metadata, slug: path.replace('.svx', '') }
+		})
+		body.push(post)
+	}
+
+	export async function load() {
+		const posts = await Promise.all(body)
+		return {
+			props: {
+				posts
+			}
+		}
+	}
+</script>
+
+<script>
+	export let posts
+</script>
+
+<div class="main">
+	<h1>Blog</h1>
+	<ul class="post-list">
+		{#each posts as { title, tags, outline, slug }}
+			<li class="post-wrapper">
+				<div class="post">
+					<a rel="prefetch" href="blog/{slug}">
+						<h2>
+							{title}
+						</h2>
+
+						<p>
+							{outline}
+						</p>
+					</a>
+					<div class="tags">
+						{#each tags as tag, i}
+								{tag}{#if i < tags.length - 1}, {/if}
+						{/each}
+					</div>
+				</div>
+			</li>
+		{/each}
+	</ul>
+</div>
+```
+
+Obviously, there's much more to do. But with these bones in place, a blog has taken shape and we can hit the ground running.
