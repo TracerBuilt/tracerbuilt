@@ -4,7 +4,7 @@
 	let loading = false
 </script>
 
-<div in:fade class="dark:text-grey-3 dark:bg-grey-10 body-font relative">
+<div in:fade class="dark:text-grey-3 body-font relative">
 	<form
 		name="Contact"
 		method="POST"
@@ -86,15 +86,15 @@
 						</div></button
 					>
 				</div>
-				<div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+				<div class="p-2 w-full pt-8 mt-8 border-t border-grey-6 text-center">
 					<p class="leading-normal my-5">
 						<a
 							href="mailto:tyler@tracerbuilt.dev"
-							class="font-mono font-bold text-grey-9 bg-clip-text hover:bg-gradient-to-br active:from-blue-11 active:via-purple-11 active:to-red-11 from-blue-9 via-purple-9 to-red-9 hover:text-transparent"
+							class="font-mono font-bold text-grey-9 dark:text-grey-4 bg-clip-text hover:bg-gradient-to-br active:from-blue-11 active:via-purple-11 active:to-red-11 from-blue-9 via-purple-9 to-red-9 hover:text-transparent"
 							>tyler@tracerbuilt.dev</a
 						>
 					</p>
-					<span class="inline-flex text-grey-9">
+					<span class="inline-flex text-grey-9 dark:text-grey-4">
 						<a
 							href="https://github.com/TracerBuilt"
 							class="ml-4 hover:text-blue-9 active:text-purple-9 transition-colors"
