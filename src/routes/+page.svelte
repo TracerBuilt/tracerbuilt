@@ -41,7 +41,7 @@
 			{#if intersecting}
 				<Work />
 			{:else}
-				<div class="h-full" />
+				<div class="h-screen" />
 			{/if}
 		</section>
 	</IntersectionObserver>
@@ -50,7 +50,7 @@
 			{#if intersecting}
 				<About />
 			{:else}
-				<div class="h-1/3" />
+				<div class="h-[50vh]" />
 			{/if}
 		</section>
 	</IntersectionObserver>
@@ -59,7 +59,7 @@
 			{#if intersecting}
 				<Stack />
 			{:else}
-				<div class="h-1/3" />
+				<div class="h-[50vh]" />
 			{/if}
 		</section>
 	</IntersectionObserver>
