@@ -9,9 +9,11 @@
 	let windowWidth: number
 
 	onMount(() => {
-		posthog.init('phc_ccE2fsK0bnxAPL5S08FF1GSQsqI8puUFwiw2hjqIaGY', {
-			api_host: 'https://app.posthog.com'
-		})
+		if (!window.location.href.includes('127.0.0.1')) {
+			posthog.init('phc_ccE2fsK0bnxAPL5S08FF1GSQsqI8puUFwiw2hjqIaGY', {
+				api_host: 'https://app.posthog.com'
+			})
+		}
 	})
 </script>
 
