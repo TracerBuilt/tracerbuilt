@@ -3,7 +3,7 @@
 </script>
 
 <div class="mx-2 relative mb-12">
-	<PhotoBorder>
+	<PhotoBorder format="desktop">
 		<picture>
 			<source srcset="/images/jefferson-home-desktop.avif" type="image/avif" />
 			<source srcset="/images/jefferson-home-desktop.webp" type="image/webp" />
@@ -16,7 +16,7 @@
 			/>
 		</picture>
 	</PhotoBorder>
-	<PhotoBorder mobile>
+	<PhotoBorder format="mobile">
 		<picture>
 			<source srcset="/images/jefferson-home-mobile.avif" type="image/avif" />
 			<source srcset="/images/jefferson-home-mobile.webp" type="image/webp" />
@@ -32,7 +32,7 @@
 </div>
 <div class="max-w-prose font-serif mx-auto [&>p]:mb-4 [&>p]:leading-relaxed">
 	<h1 class="text-3xl font-sans leading-none mb-4">Jefferson Theatre Company</h1>
-	<div class="font-sans text-grey-9 leading-none mb-6">
+	<div class="font-sans text-grey-9 dark:text-grey-4 leading-none mb-6">
 		Svelte, SvelteKit, Prismic, Snipcart, Google APIs, Netlify
 	</div>
 	<a
@@ -93,9 +93,7 @@
 		been shown on. This also allowed the data to be pulled into things like a calendar of events,
 		and the application process itself.
 	</p>
-	<div
-		class="p-0.5 bg-gradient-to-br from-blue-9 via-purple-9 to-red-9 [&>picture>img]:rounded-md rounded-lg shadow-lg shadow-grey-9 mb-12"
-	>
+	<PhotoBorder>
 		<picture>
 			<source srcset="/images/jefferson-calendar.avif" type="image/avif" />
 			<source srcset="/images/jefferson-calendar.webp" type="image/webp" />
@@ -107,7 +105,7 @@
 				height="1688"
 			/>
 		</picture>
-	</div>
+	</PhotoBorder>
 	<h3 class="text-xl font-sans mb-2">Keep Operation Simple</h3>
 	<p>
 		The <span class="small-caps text-lg">cms</span> structure was kept intentionally simple: the vast
@@ -119,9 +117,7 @@
 		etc. can be added to productions; and announcements can be scheduled if they are for events like
 		fundraisers.
 	</p>
-	<div
-		class="p-0.5 bg-gradient-to-br from-blue-9 via-purple-9 to-red-9 [&>picture>img]:rounded-md rounded-lg shadow-lg shadow-grey-9 mb-12"
-	>
+	<PhotoBorder>
 		<picture>
 			<source srcset="/images/jefferson-about.avif" type="image/avif" />
 			<source srcset="/images/jefferson-about.webp" type="image/webp" />
@@ -133,7 +129,7 @@
 				height="1688"
 			/>
 		</picture>
-	</div>
+	</PhotoBorder>
 	<h3 class="text-xl font-sans mb-2">Streamline Audition Applications</h3>
 	<p>
 		This was the most challenging portion of the work. Previously, applications were submitted

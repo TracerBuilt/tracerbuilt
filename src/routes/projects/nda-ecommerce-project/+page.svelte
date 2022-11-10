@@ -3,7 +3,7 @@
 
 <div class="max-w-prose font-serif mx-auto [&>p]:mb-4 [&>p]:leading-relaxed">
 	<h1 class="text-3xl font-sans leading-none mb-4">NDA Ecommerce Project</h1>
-	<div class="font-sans text-grey-9 leading-none mb-6">
+	<div class="font-sans text-grey-9 dark:text-grey-4 leading-none mb-6">
 		React, Next.js, Typescript, Netlify, Stripe
 	</div>
 	<p>

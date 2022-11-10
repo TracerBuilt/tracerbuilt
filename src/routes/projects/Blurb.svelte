@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PhotoBorder from "$lib/components/Photo_Border.svelte"
+	import PhotoBorder from '$lib/components/Photo_Border.svelte'
 
 	export let href: string
 </script>
@@ -7,10 +7,10 @@
 <a {href} class="flex flex-col gap-2 w-full">
 	{#if $$slots.picture_desktop}
 		<div class="w-full relative mb-12">
-			<PhotoBorder>
+			<PhotoBorder format="desktop">
 				<slot name="picture_desktop" />
 			</PhotoBorder>
-			<PhotoBorder mobile >
+			<PhotoBorder format="mobile">
 				<slot name="picture_mobile" />
 			</PhotoBorder>
 		</div>
