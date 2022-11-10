@@ -57,7 +57,7 @@
 
 	<h2 class="text-2xl font-sans mb-2">Solutions</h2>
 
-	<h3>Rewrite the Thing</h3>
+	<h3 class="text-xl font-sans mb-2">Rewrite the Thing</h3>
 
 	<p>
 		The site was entirely rewritten in Svelte and Sveltekit, to take advantage of the built-in
