@@ -7,12 +7,12 @@
 	in:fly={{ duration: 400, x: -200, easing: cubicInOut }}
 	class="text-center dark:text-grey-3 text-grey-1 w-screen bg-gradient-to-br from-blue-9 via-purple-9 pb-12 pt-4 -skew-y-3 to-red-9 -mx-2 mb-16 dark:from-blue-11 dark:via-purple-11 dark:to-red-11"
 >
-	<div class="max-w-4xl skew-y-3 mx-auto">
+	<div class="w-11/12 max-w-4xl skew-y-3 mx-auto">
 		<h2 in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 200 }} class="text-3xl mb-4">
 			About Me
 		</h2>
 		<div class="flex flex-col items-center justify-center md:flex-row md:items-start">
-			<div class="text-left max-w-prose [&>p]:mb-4 font-serif">
+			<div class="text-left px-2 md:px-0 max-w-prose [&>p]:mb-4 font-serif">
 				<p in:fly={{ duration: 400, x: -200, easing: cubicInOut, delay: 400 }}>
 					I prize simplicity in both my lifestyle and my work. I make websites that are stable,
 					performant, and responsive because the user's experience on your site is what matters the
