@@ -18,7 +18,7 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <Header />
-<main>
+<main class="flex-grow">
 	<slot />
 </main>
 <Footer />
