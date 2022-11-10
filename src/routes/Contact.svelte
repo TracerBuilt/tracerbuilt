@@ -98,6 +98,7 @@
 						<a
 							href="https://github.com/TracerBuilt"
 							class="hover:text-blue-9 active:text-purple-9 transition-colors"
+							aria-label="Github"
 						>
 							<svg
 								fill="currentColor"
@@ -115,6 +116,7 @@
 						<a
 							href="https://twitter.com/tracer_built"
 							class="ml-4 hover:text-blue-9 active:text-purple-9 transition-colors"
+							aria-label="Twitter"
 						>
 							<svg
 								fill="currentColor"
@@ -132,6 +134,7 @@
 						<a
 							href="https://linkedin.com/in/TracerBuilt"
 							class="ml-4 hover:text-blue-9 active:text-purple-9 transition-colors"
+							aria-label="LinkedIn"
 						>
 							<svg
 								fill="currentColor"
