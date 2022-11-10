@@ -26,9 +26,10 @@
 		content="A freelance, full-stack developer specializing in responsive and performant sites and apps, as well as ecommerce."
 	/>
 	<meta property="og:site_name" content="Tracerbuilt" />
+	<meta property="twitter:image" content="https://tracerbuilt.dev/images/home.jpeg" />
 	<meta
 		property="twitter:image:alt"
-		content="The front page of the website, with light and gradient text on a dark background that says: 'Hey, I'm Tyler I build cool stuff for the web.'"
+		content="The front page of my portfolio website, with light and gradient text on a dark background that says: 'Hey, I'm Tyler I build cool stuff for the web.'"
 	/>
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:site" content="@Tracer_Built" />
