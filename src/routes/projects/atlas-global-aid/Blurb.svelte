@@ -30,7 +30,7 @@
 
 	<span slot="text">
 		<p>
-			A custom SvelteKit-based site for a non-profit providing non-lethal aid to Ukraine, with
+			A SvelteKit-based site for a non-profit providing non-lethal aid to Ukraine, with
 			Prismic CMS integration and PayPal donations and fundraising campaigns.
 		</p>
 	</span>

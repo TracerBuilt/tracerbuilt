@@ -8,13 +8,16 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Full Stack Web Developer</title>
+	<meta name="description" content="A freelance, full-stack developer specializing in responsive and performant sites and apps, as well as ecommerce." />
+	<meta name="keywords" content="HTML, CSS, TypeScript, JavaScript, Svelte, SvelteKit, React, Next.js, Web Developer, Full Stack, Freelance Developer" />
+	<meta property="og:title" content="Full Stack Web Developer" />
+	<meta property="og:url" content="https://tracerbuilt.dev" />
+	<meta property="og:image" content="https://tracerbuilt.dev/og-home.jpg" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="A freelance, full-stack developer specializing in responsive and performant sites and apps, as well as ecommerce." />
+	<meta property="og:locale" content="en_US" />
 
-	<style>
-		:root {
-			--footer-color: var(--white) !important;
-		}
-	</style>
 </svelte:head>
 
 <div class="mx-2">
