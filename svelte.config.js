@@ -14,7 +14,14 @@ const config = {
 	],
 
 	kit: {
-		adapter: netlify()
+		adapter: netlify(),
+		csp: {
+			directives: {
+				'script-src': ['strict-dynamic', 'unsafe-inline', 'https:'],
+				'object-src': ['none'],
+				'base-uri': ['self']
+			}
+		}
 	}
 }
 
