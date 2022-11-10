@@ -279,8 +279,13 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				serif: ['EB GaramondVariable', 'EB Garamond', ...defaultTheme.fontFamily.serif],
-				sans: ['OswaldVariable', 'Oswald', ...defaultTheme.fontFamily.sans],
-				mono: ['Victor Mono', ...defaultTheme.fontFamily.mono]
+				sans: ['CabinVariable', 'Cabin', ...defaultTheme.fontFamily.sans],
+				mono: ['JetBrains MonoVariable', 'JetBrains Mono', ...defaultTheme.fontFamily.mono]
+			},
+			listStyleType: {
+				circle: 'circle',
+				square: 'square',
+				hyphen: "'- '"
 			},
 			backgroundSize: {
 				'400%': '400%'
@@ -311,7 +316,7 @@ module.exports = {
 				wiggle: 'wiggle 0.5s 1',
 				'letter-bounce': 'letter-bounce 0.3s forwards',
 				'move-bg': 'move-bg 15s infinite linear',
-				'move-bg-fast': 'move-bg 7s infinite linear'
+				'move-bg-fast': 'move-bg 4s infinite linear'
 			}
 		}
 	},

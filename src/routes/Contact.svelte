@@ -75,7 +75,7 @@
 				<div class="p-2 w-full">
 					<button
 						type="submit"
-						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none hover:bg-indigo-7 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 group"
+						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none hover:bg-indigo-7 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 group transition-all"
 					>
 						<div class="bg-grey-0 rounded-sm">
 							<div
@@ -90,14 +90,14 @@
 					<p class="leading-normal my-5">
 						<a
 							href="mailto:tyler@tracerbuilt.dev"
-							class="font-mono font-bold text-grey-9 dark:text-grey-4 bg-clip-text hover:bg-gradient-to-br active:from-blue-11 active:via-purple-11 active:to-red-11 from-blue-9 via-purple-9 to-red-9 hover:text-transparent"
+							class="font-mono font-bold text-grey-9 dark:text-grey-4/100 bg-clip-text bg-gradient-to-br active:from-blue-11 active:via-purple-11 active:to-red-11 from-blue-9 via-purple-9 to-red-9 transition-all hover:text-grey-4/0"
 							>tyler@tracerbuilt.dev</a
 						>
 					</p>
 					<span class="inline-flex text-grey-9 dark:text-grey-4">
 						<a
 							href="https://github.com/TracerBuilt"
-							class="ml-4 hover:text-blue-9 active:text-purple-9 transition-colors"
+							class="hover:text-blue-9 active:text-purple-9 transition-colors"
 						>
 							<svg
 								fill="currentColor"
