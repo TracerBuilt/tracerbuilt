@@ -302,6 +302,9 @@ module.exports = {
 					'30%': {
 						bottom: '0.15em'
 					},
+					'60%': {
+						bottom: '-0.05em'
+					},
 					'100%': {
 						bottom: '0'
 					}

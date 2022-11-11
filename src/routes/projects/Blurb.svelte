@@ -4,23 +4,29 @@
 	export let href: string
 </script>
 
-<a {href} class="flex flex-col gap-2 w-full">
+<a {href} class={`flex flex-col gap-2 w-full group ${$$slots.picture_desktop ? '' : 'mt-12'}`}>
 	{#if $$slots.picture_desktop}
 		<div class="w-full relative mb-12">
-			<PhotoBorder format="desktop">
-				<slot name="picture_desktop" />
-			</PhotoBorder>
-			<PhotoBorder format="mobile">
-				<slot name="picture_mobile" />
-			</PhotoBorder>
+			<div class="group-hover:scale-105 transition-all">
+				<PhotoBorder format="desktop">
+					<slot name="picture_desktop" />
+				</PhotoBorder>
+			</div>
+			<div class="group-hover:scale-105 transition-all">
+				<PhotoBorder format="mobile">
+					<slot name="picture_mobile" />
+				</PhotoBorder>
+			</div>
 		</div>
-	{:else}
-		<div class="h-12" />
 	{/if}
-	<h3 class="w-11/12 mx-auto text-2xl mb-4 leading-none"><slot name="name" /></h3>
-	<div class="w-11/12 mx-auto justify-between flex mt-0 flex-col sm:flex-row">
+	<div class="w-11/12 mx-auto">
+		<h3
+			class="text-transparent bg-clip-text from-blue-9 via-purple-9 to-red-9 bg-gradient-to-br group-hover:from-blue-11 group-hover:via-purple-11 group-hover:to-red-11 group-active:from-blue-12 group-active:via-purple-12 group-active:to-red-12 text-2xl mb-2 transition-colors inline-block"
+		>
+			<slot name="name" />
+		</h3>
 		<div
-			class="sm:order-last sm:w-1/4 font-normal text-grey-9 dark:text-grey-4 [&>ul]:flex [&>ul]:flex-wrap [&>ul]:gap-2 [&>ul]:sm:block [&>ul]:sm:columns-2 sm:text-right [&>ul>li]:whitespace-nowrap flex-shrink-0 sm:leading-[1.7rem] [&>ul>:not(:last-child)]:sm:after:content-[''] [&>ul>:not(:last-child)]:after:content-[','] mb-4 sm:mb-0"
+			class="font-normal text-grey-9 dark:text-grey-4 [&>ul]:flex [&>ul]:flex-wrap [&>ul]:gap-2 [&>ul>li]:whitespace-nowrap flex-shrink-0 [&>ul>:not(:last-child)]:after:content-[','] mb-4"
 		>
 			<slot name="stack" />
 		</div>
