@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Full Stack Web Developer</title>
+	<title>Tyler Ward</title>
 	<meta
 		name="description"
 		content="A freelance, full-stack developer specializing in responsive and performant sites and apps, as well as ecommerce."
@@ -17,7 +17,7 @@
 		name="keywords"
 		content="HTML, CSS, TypeScript, JavaScript, Svelte, SvelteKit, React, Next.js, Web Developer, Full Stack, Freelance Developer"
 	/>
-	<meta property="og:title" content="Full Stack Web Developer" />
+	<meta property="og:title" content="Tracerbuilt - Full Stack Web Developer" />
 	<meta property="og:url" content="https://tracerbuilt.dev" />
 	<meta property="og:image" content="https://tracerbuilt.dev/images/home.jpeg" />
 	<meta property="og:type" content="website" />
