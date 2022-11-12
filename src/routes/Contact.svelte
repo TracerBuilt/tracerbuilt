@@ -39,7 +39,7 @@
 								id="name"
 								name="name"
 								required
-								class="w-full rounded-sm outline-none dark:bg-grey-9 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 								id="email"
 								name="email"
 								required
-								class="w-full rounded-sm outline-none dark:bg-grey-9 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
@@ -70,7 +70,7 @@
 								id="message"
 								name="message"
 								required
-								class="w-full rounded-sm outline-none dark:bg-grey-9 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base resize-none text-grey-8 py-1 px-3 leading-8 h-full transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base resize-none text-grey-8 py-1 px-3 leading-8 h-full transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
