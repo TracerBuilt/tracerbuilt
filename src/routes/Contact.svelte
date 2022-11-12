@@ -82,7 +82,7 @@
 					>
 						<div class="bg-grey-0 dark:bg-grey-11 rounded-sm">
 							<div
-								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 dark:from-blue-7 dark:via-red-9 dark:to-red-9 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
+								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 dark:from-blue-7 dark:via-red-7 dark:to-blue-7 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
 							>
 								{loading ? 'Submitting...' : 'Submit'}
 							</div>
