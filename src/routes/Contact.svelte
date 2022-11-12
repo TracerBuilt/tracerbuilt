@@ -78,11 +78,11 @@
 				<div class="p-2 w-full">
 					<button
 						type="submit"
-						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none dark:from-blue-7 dark:via-red-7 dark:to-blue-7 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 transition-all"
+						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none dark:from-blue-5 dark:via-red-5 dark:to-blue-5 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 transition-all"
 					>
-						<div class="bg-grey-0 dark:bg-grey-11 rounded-sm">
+						<div class="bg-grey-0 dark:bg-grey-10 rounded-sm">
 							<div
-								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 dark:from-blue-7 dark:via-red-7 dark:to-blue-7 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
+								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 dark:from-blue-5 dark:via-red-5 dark:to-blue-5 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
 							>
 								{loading ? 'Submitting...' : 'Submit'}
 							</div>
