@@ -32,14 +32,14 @@
 					<div class="relative">
 						<label for="name" class="leading-7 text-sm text-grey-8 dark:text-grey-2">Name</label>
 						<div
-							class="bg-grey-4 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
+							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
 							<input
 								type="text"
 								id="name"
 								name="name"
 								required
-								class="w-full dark:bg-grey-4 rounded-sm outline-none dark:bg-grey-9 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-9 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 					<div class="relative">
 						<label for="email" class="leading-7 text-sm text-grey-8 dark:text-grey-2">Email</label>
 						<div
-							class="bg-grey-4 dark:bg-grey-4 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
+							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
 							<input
 								type="email"
