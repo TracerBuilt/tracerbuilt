@@ -20,10 +20,10 @@
 		<nav class="flex justify-end items-baseline flex-wrap gap-2 text-sm sm:text-base sm:gap-4 ml-4">
 			<div class="flex gap-2 sm:gap-4">
 				{#each routes as route, i}
-					<div class="ease-in-out inline-block group">
+					<div class="ease-in-out inline-block group text-grey-8 dark:text-grey-4 dark:hover:text-grey-2 dark:active:text-grey-0 hover:text-grey-10 active:text-grey-12 font-medium">
 						<a href={route.path} class=""
 							>{#each route.text as letter, j}<span
-									class="relative text-grey-8 group-hover:text-grey-10 group-active:text-grey-12 font-medium ease-in-out group-hover:animate-letter-bounce"
+									class="relative  ease-in-out group-hover:animate-letter-bounce"
 									style:animation-delay={`${j / 20}s`}>{letter}</span
 								>{/each}</a
 						>

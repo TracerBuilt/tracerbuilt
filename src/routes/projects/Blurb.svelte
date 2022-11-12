@@ -21,7 +21,7 @@
 	{/if}
 	<div class="w-11/12 mx-auto">
 		<h3
-			class="text-transparent bg-clip-text from-blue-9 via-purple-9 to-red-9 bg-gradient-to-br group-hover:from-blue-11 group-hover:via-purple-11 group-hover:to-red-11 group-active:from-blue-12 group-active:via-purple-12 group-active:to-red-12 text-2xl mb-2 transition-colors inline-block"
+			class="text-transparent bg-clip-text dark:from-blue-7 dark:via-purple-7 dark:to-red-7 from-blue-9 via-purple-9 to-red-9 bg-gradient-to-br dark:group-hover:from-blue-5 dark:group-hover:via-purple-5 dark:group-hover:to-red-5 dark:group-active:from-blue-4 dark:group-active:via-purple-4 dark:group-active:to-red-4 group-hover:from-blue-11 group-hover:via-purple-11 group-hover:to-red-11 group-active:from-blue-12 group-active:via-purple-12 group-active:to-red-12 text-2xl mb-2 transition-colors inline-block"
 		>
 			<slot name="name" />
 		</h3>
