@@ -11,9 +11,6 @@ const staticPages = Object.keys(import.meta.glob('/src/routes/**/+page.(svelte|m
 		page.replace('/src/routes', url).replace('/+page.svelte', '.html').replace('/+page.md', '.html')
 	)
 
-const date = new Date()
-const time = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
-
 export const prerender = true
 
 export const GET = async (): Promise<Response> => {
@@ -35,7 +32,6 @@ export const GET = async (): Promise<Response> => {
         <loc>${url}</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
-        <lastmod>${`${time}`}</lastmod>
       </url>
       ${staticPages
 			.map(
@@ -43,7 +39,6 @@ export const GET = async (): Promise<Response> => {
         <loc>${url}</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
-        <lastmod>${`${time}`}</lastmod>
       </url>`
 			)
 			.join('')}
