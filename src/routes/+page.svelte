@@ -17,7 +17,7 @@
 		name="keywords"
 		content="HTML, CSS, TypeScript, JavaScript, Svelte, SvelteKit, React, Next.js, Web Developer, Full Stack, Freelance Developer"
 	/>
-	<meta property="og:title" content="Tracerbuilt - Full Stack Web Developer" />
+	<meta property="og:title" content="Tyler Ward - Full Stack Web Developer" />
 	<meta property="og:url" content="https://tracerbuilt.dev" />
 	<meta property="og:image" content="https://tracerbuilt.dev/images/home.jpeg" />
 	<meta property="og:type" content="website" />
@@ -29,7 +29,7 @@
 	<meta property="twitter:image" content="https://tracerbuilt.dev/images/home.jpeg" />
 	<meta
 		property="twitter:image:alt"
-		content="The front page of my portfolio website, with light and gradient text on a dark background that says: 'Hey, I'm Tyler I build cool stuff for the web.'"
+		content={`The front page of my portfolio website, with white and gradient text on a dark background that says: "Hey, I'm Tyler I build cool stuff for the web"kand a gradient double triangle in the corner.`}
 	/>
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:site" content="@Tracer_Built" />

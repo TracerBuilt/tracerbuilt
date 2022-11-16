@@ -5,9 +5,6 @@
 	import posthog from 'posthog-js'
 	import { onMount } from 'svelte'
 
-	let navOpen = false
-	let windowWidth: number
-
 	onMount(() => {
 		if (!window.location.href.includes('127.0.0.1')) {
 			posthog.init('phc_ccE2fsK0bnxAPL5S08FF1GSQsqI8puUFwiw2hjqIaGY', {
@@ -16,8 +13,6 @@
 		}
 	})
 </script>
-
-<svelte:window bind:innerWidth={windowWidth} />
 
 <Header />
 <main class="flex-grow">
