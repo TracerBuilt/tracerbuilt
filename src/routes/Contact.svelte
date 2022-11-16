@@ -32,14 +32,14 @@
 					<div class="relative">
 						<label for="name" class="leading-7 text-sm text-grey-8 dark:text-grey-2">Name</label>
 						<div
-							class="bg-grey-4 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
+							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
 							<input
 								type="text"
 								id="name"
 								name="name"
 								required
-								class="w-full rounded-sm outline-none border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
@@ -48,29 +48,29 @@
 					<div class="relative">
 						<label for="email" class="leading-7 text-sm text-grey-8 dark:text-grey-2">Email</label>
 						<div
-							class="bg-grey-4 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
+							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
 							<input
 								type="email"
 								id="email"
 								name="email"
 								required
-								class="w-full rounded-sm outline-none border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
 				</div>
 				<div class="p-2 w-full">
 					<div class="relative">
-						<label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+						<label for="message" class="leading-7 text-sm">Message</label>
 						<div
-							class="bg-grey-4 from-blue-9 to-red-9 via-purple-9 h-48 rounded p-0.5 focus-within:bg-gradient-to-br"
+							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 h-48 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
 							<textarea
 								id="message"
 								name="message"
 								required
-								class="w-full rounded-sm outline-none border-none focus:ring-0 bg-grey-0 text-base resize-none text-grey-8 py-1 px-3 leading-8 h-full transition-colors duration-200 ease-in-out"
+								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base resize-none text-grey-8 py-1 px-3 leading-8 h-full transition-colors duration-200 ease-in-out"
 							/>
 						</div>
 					</div>
@@ -78,11 +78,11 @@
 				<div class="p-2 w-full">
 					<button
 						type="submit"
-						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none hover:bg-indigo-7 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 group transition-all"
+						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none dark:from-blue-5 dark:via-red-5 dark:to-blue-5 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 transition-all"
 					>
-						<div class="bg-grey-0 rounded-sm">
+						<div class="bg-grey-0 dark:bg-grey-10 rounded-sm">
 							<div
-								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
+								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 dark:from-blue-5 dark:via-red-5 dark:to-blue-5 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
 							>
 								{loading ? 'Submitting...' : 'Submit'}
 							</div>
