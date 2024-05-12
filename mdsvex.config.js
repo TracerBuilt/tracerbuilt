@@ -6,7 +6,6 @@ const config = {
 		backticks: false,
 		dashes: 'oldschool'
 	},
-	layout: './src/lib/blogLayout.svelte'
 }
 
 export default config
