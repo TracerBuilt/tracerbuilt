@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 
 <head>
 	<meta charset="utf-8" />
@@ -14,10 +14,9 @@
 	%sveltekit.head%
 </head>
 
-<body>
-	%sveltekit.body%
+<body
+	class="bg-gray-1/100 text-gray-11/100 dark:bg-gray-11/100 dark:text-gray-1/100 relative flex h-full flex-col text-base">
+	<div style="display: contents">%sveltekit.body%</div>
 </body>
 
 </html>
-
-<script></script>

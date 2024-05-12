@@ -1,36 +1,37 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition'
-
 	let loading = false
 </script>
 
-<div in:fade class="dark:text-grey-3 body-font relative">
+<div class="dark:text-grey-3 body-font relative">
 	<form
 		name="Contact"
 		method="POST"
-		data-netlify="true"
-		netlify-honeypot="bot-field"
 		action="/contact/success"
-		class="container px-5 py-24 mx-auto"
+		class="container mx-auto py-24 px-5"
 	>
 		<input type="hidden" name="form-name" value="Contact" />
 		<label class="hidden">
 			Don’t fill this out if you’re human: <input name="bot-field" />
 		</label>
-		<div class="flex flex-col text-center w-full mb-12">
-			<h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 dark:text-grey-3 text-grey-10">
+		<div class="mb-12 flex w-full flex-col text-center">
+			<h1
+				class="title-font dark:text-grey-3 text-grey-10 mb-4 text-2xl font-medium sm:text-3xl"
+			>
 				Get In Touch
 			</h1>
-			<p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-				I'm currently accepting clients, so if you're interested in working together, please feel
-				free to send me a message.
+			<p class="mx-auto text-base leading-relaxed lg:w-2/3">
+				I'm currently accepting clients, so if you're interested in working
+				together, please feel free to send me a message.
 			</p>
 		</div>
-		<div class="lg:w-1/2 md:w-2/3 mx-auto">
-			<div class="flex flex-wrap -m-2">
-				<div class="p-2 w-1/2">
+		<div class="mx-auto md:w-2/3 lg:w-1/2">
+			<div class="-m-2 flex flex-wrap">
+				<div class="w-1/2 p-2">
 					<div class="relative">
-						<label for="name" class="leading-7 text-sm text-grey-8 dark:text-grey-2">Name</label>
+						<label
+							for="name"
+							class="text-grey-8 dark:text-grey-2 text-sm leading-7">Name</label
+						>
 						<div
 							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
@@ -39,14 +40,18 @@
 								id="name"
 								name="name"
 								required
-								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 bg-grey-0 text-grey-8 w-full rounded-sm border-none py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:ring-0"
 							/>
 						</div>
 					</div>
 				</div>
-				<div class="p-2 w-1/2">
+				<div class="w-1/2 p-2">
 					<div class="relative">
-						<label for="email" class="leading-7 text-sm text-grey-8 dark:text-grey-2">Email</label>
+						<label
+							for="email"
+							class="text-grey-8 dark:text-grey-2 text-sm leading-7"
+							>Email</label
+						>
 						<div
 							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
@@ -55,14 +60,14 @@
 								id="email"
 								name="email"
 								required
-								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base text-grey-8 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 bg-grey-0 text-grey-8 w-full rounded-sm border-none py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:ring-0"
 							/>
 						</div>
 					</div>
 				</div>
-				<div class="p-2 w-full">
+				<div class="w-full p-2">
 					<div class="relative">
-						<label for="message" class="leading-7 text-sm">Message</label>
+						<label for="message" class="text-sm leading-7">Message</label>
 						<div
 							class="bg-grey-4 dark:bg-grey-8 from-blue-9 to-red-9 via-purple-9 h-48 rounded p-0.5 focus-within:bg-gradient-to-br"
 						>
@@ -70,34 +75,34 @@
 								id="message"
 								name="message"
 								required
-								class="w-full rounded-sm outline-none dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 border-none focus:ring-0 bg-grey-0 text-base resize-none text-grey-8 py-1 px-3 leading-8 h-full transition-colors duration-200 ease-in-out"
-							/>
+								class="dark:bg-grey-10 dark:focus:bg-grey-11 dark:text-grey-2 bg-grey-0 text-grey-8 h-full w-full resize-none rounded-sm border-none py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:ring-0"
+							></textarea>
 						</div>
 					</div>
 				</div>
-				<div class="p-2 w-full">
+				<div class="w-full p-2">
 					<button
 						type="submit"
-						class="text-white bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 focus:outline-none dark:from-blue-5 dark:via-red-5 dark:to-blue-5 p-0.5 flex mx-auto rounded text-lg group focus:animate-move-bg-fast hover:animate-move-bg-fast hover:scale-110 active:scale-90 focus:scale-110 bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 disabled:hover:animate-none disabled:hover:scale-100 disabled:focus:scale-100 transition-all"
+						class="from-blue-9 via-red-9 to-blue-9 dark:from-blue-5 dark:via-red-5 dark:to-blue-5 group focus:animate-move-bg-fast hover:animate-move-bg-fast bg-400% disabled:from-grey-7 disabled:via-grey-7 disabled:to-grey-7 mx-auto flex rounded bg-gradient-to-r p-0.5 text-lg text-white transition-all hover:scale-110 focus:scale-110 focus:outline-none active:scale-90 disabled:hover:scale-100 disabled:hover:animate-none disabled:focus:scale-100"
 					>
 						<div class="bg-grey-0 dark:bg-grey-10 rounded-sm">
 							<div
-								class="bg-clip-text text-transparent bg-gradient-to-r from-blue-9 via-red-9 to-blue-9 dark:from-blue-5 dark:via-red-5 dark:to-blue-5 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast w-full h-full px-4 pb-1 pt-0.5 group-disabled:text-grey-8"
+								class="from-blue-9 via-red-9 to-blue-9 dark:from-blue-5 dark:via-red-5 dark:to-blue-5 bg-400% group-hover:animate-move-bg-fast group-focus:animate-move-bg-fast group-disabled:text-grey-8 h-full w-full bg-gradient-to-r bg-clip-text pt-0.5 px-4 pb-1 text-transparent"
 							>
 								{loading ? 'Submitting...' : 'Submit'}
 							</div>
 						</div></button
 					>
 				</div>
-				<div class="p-2 w-full pt-8 mt-8 border-t border-grey-6 text-center">
-					<p class="leading-normal my-5">
+				<div class="border-grey-6 mt-8 w-full border-t p-2 pt-8 text-center">
+					<p class="my-5 leading-normal">
 						<a
 							href="mailto:tyler@tracerbuilt.dev"
-							class="font-mono font-bold text-grey-9 dark:text-grey-4/100 bg-clip-text bg-gradient-to-br active:from-blue-11 active:via-purple-11 active:to-red-11 from-blue-9 via-purple-9 to-red-9 transition-all hover:text-grey-4/0"
+							class="text-grey-9 dark:text-grey-4/100 active:from-blue-11 active:via-purple-11 active:to-red-11 from-blue-9 via-purple-9 to-red-9 hover:text-grey-4/0 bg-gradient-to-br bg-clip-text font-mono font-bold transition-all"
 							>tyler@tracerbuilt.dev</a
 						>
 					</p>
-					<span class="inline-flex text-grey-9 dark:text-grey-4">
+					<span class="text-grey-9 dark:text-grey-4 inline-flex">
 						<a
 							href="https://github.com/TracerBuilt"
 							class="hover:text-blue-9 active:text-purple-9 transition-colors"
@@ -108,7 +113,7 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								class="w-5 h-5"
+								class="h-5 w-5"
 								viewBox="0 0 24 24"
 							>
 								<path
@@ -118,7 +123,7 @@
 						</a>
 						<a
 							href="https://twitter.com/tracer_built"
-							class="ml-4 hover:text-blue-9 active:text-purple-9 transition-colors"
+							class="hover:text-blue-9 active:text-purple-9 ml-4 transition-colors"
 							aria-label="Twitter"
 						>
 							<svg
@@ -126,7 +131,7 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								class="w-5 h-5"
+								class="h-5 w-5"
 								viewBox="0 0 24 24"
 							>
 								<path
@@ -136,7 +141,7 @@
 						</a>
 						<a
 							href="https://linkedin.com/in/TracerBuilt"
-							class="ml-4 hover:text-blue-9 active:text-purple-9 transition-colors"
+							class="hover:text-blue-9 active:text-purple-9 ml-4 transition-colors"
 							aria-label="LinkedIn"
 						>
 							<svg
@@ -144,7 +149,7 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								class="w-5 h-5"
+								class="h-5 w-5"
 								viewBox="0 0 24 24"
 							>
 								<path

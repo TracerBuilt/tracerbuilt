@@ -1,34 +1,23 @@
 <script lang="ts">
-	import Fork from '$lib/components/icons/fork.svelte'
-	import Star from '$lib/components/icons/star.svelte'
-	const url = 'https://api.github.com/repos/TracerBuilt/tracerbuilt'
-	let stars: number
-	let forks: number
+	import Fork from '$lib/icons/Fork.svelte'
+	import Star from '$lib/icons/Star.svelte'
 
-	fetch(url, { headers: { 'Content-Type': 'application/json' } })
-		.then((res) => res.json())
-		.then((data) => {
-			stars = data.stargazers_count
-			forks = data.forks_count
-		})
+	let { stars, forks } = $props()
 </script>
 
-<footer
-	class="relative z-0 flex flex-start justify-center bg-gradient-to-br dark:from-blue-11 dark:via-purple-11 dark:to-red-11 from-blue-9 via-purple-9 to-red-9 pt-24 mt-12 pb-12"
-	style:clip-path="polygon(0px 100px, 100% 0px, 100% 100%, 0% 100%)"
->
+<footer class="flex-start relative z-0 mt-12 flex justify-center pt-24 pb-12">
 	<a
 		href="https://github.com/TracerBuilt/tracerbuilt"
-		class="flex flex-col items-center text-grey-3 dark:text-grey-4 dark:fill-grey-4 fill-grey-3 transition-all ease-in-out hover:text-blue-7 hover:fill-blue-7"
+		class="flex flex-col items-center fill-gray-400 text-gray-400 transition-all ease-in-out hover:fill-blue-700 hover:text-blue-700 dark:fill-gray-500 dark:text-gray-500"
 	>
 		<p class="mb-2">Created by tracerbuilt</p>
-		<div class="flex items-center gap-4 [&>div]:flex [&>div]:items-center [&>div]:gap-1">
-			<div>
-				<Star class="w-6 h-auto" />
+		<div class="flex items-center gap-4">
+			<div class="flex flex-col items-center">
+				<Star class="h-auto w-6" />
 				{stars}
 			</div>
-			<div>
-				<Fork class="w-6 h-auto" />
+			<div class="flex flex-col items-center">
+				<Fork class="h-auto w-6" />
 				{forks}
 			</div>
 		</div>
