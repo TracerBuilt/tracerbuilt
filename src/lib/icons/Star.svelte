@@ -1,17 +1,17 @@
 <script lang="ts">
-	let class_name = ''
-	export { class_name as class }
+	let { class: class_name, ...attributes }: { class?: string } = $props()
 	const label = 'Github stars'
 </script>
 
 <svg
 	role="img"
-	aria-label={label}
-	class={class_name}
 	xmlns="http://www.w3.org/2000/svg"
 	width="24"
 	height="24"
 	viewBox="0 0 24 24"
+	aria-label={label}
+	{...attributes}
+	class={`${class_name}`}
 >
 	<title>{label}</title>
 	<path

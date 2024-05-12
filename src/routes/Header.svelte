@@ -1,4 +1,8 @@
 <script lang="ts">
+	import Linkedin from '$lib/icons/Linkedin.svelte'
+	import Github from '$lib/icons/Github.svelte'
+	import Twitter from '$lib/icons/Twitter.svelte'
+
 	const routes = [
 		{ path: '/#work', text: 'Work' },
 		{ path: '/#about', text: 'About' },
@@ -7,18 +11,15 @@
 	const links = [
 		{
 			href: 'https://github.com/TracerBuilt',
-			src: '/icons/github.svg',
-			alt: 'Github'
+			Component: Github
 		},
 		{
 			href: 'https://linkedin.com/in/TracerBuilt',
-			src: '/icons/linkedin.svg',
-			alt: 'LinkedIn'
+			Component: Linkedin
 		},
 		{
-			href: 'https://twitter.com/Tracer_Built',
-			src: '/icons/twitter.svg',
-			alt: 'Twitter'
+			href: 'https://x.com/Tracer_Built',
+			Component: Twitter
 		}
 	]
 </script>
@@ -45,11 +46,11 @@
 				{/each}
 			</div>
 			<div class="relative top-0.5 flex items-baseline gap-2 sm:gap-4">
-				{#each links as link}
+				{#each links as { href, Component }}
 					<div
 						class="hover:animate-wiggle w-6 transition-all ease-in hover:scale-110"
 					>
-						<a href={link.href}><img src={link.src} alt={link.alt} /></a>
+						<a {href}><Component /></a>
 					</div>
 				{/each}
 			</div>
