@@ -1,6 +1,30 @@
 <script lang="ts">
-	import Intro from './Intro.svelte'
 	import Contact from './contact/+page.svelte'
+	import Chevron from '$lib/components/Chevron.svelte'
+	import { fade, fly, slide } from 'svelte/transition'
+	import { onMount } from 'svelte'
+	import { cubicInOut } from 'svelte/easing'
+
+	let scrollY: number
+
+	let hobbies = [
+		'Camper',
+		'DIY-er',
+		'Enjoyer of books',
+		'Occasional poet',
+		'Dog leash follower'
+	]
+
+	let hobby_index = -1
+	let hobby = 'Camper'
+
+	onMount(() => {
+		setInterval(() => {
+			hobby_index >= hobbies.length - 1 ? (hobby_index = 0) : (hobby_index += 1)
+			hobby = hobbies[hobby_index]
+			console.log('index', hobby_index)
+		}, 3000)
+	})
 </script>
 
 <svelte:head>
@@ -37,9 +61,36 @@
 	<meta property="twitter:site" content="@Tracer_Built" />
 </svelte:head>
 
-<div class="mx-2">
-	<Intro />
-	<section id="contact">
-		<Contact />
-	</section>
-</div>
+<svelte:window bind:scrollY />
+
+<section
+	class="relative z-10 mb-12 flex h-[calc(100dvh-7rem)] flex-col items-start px-2"
+>
+	<h1 class="text-6xl">Tyler Ward</h1>
+	<div class="mb-4 text-3xl leading-10">Full-Stack Web Developer</div>
+	<div class="mb-8 flex w-full">
+		{#key hobby_index}
+			<div
+				in:fly={{ duration: 400, easing: cubicInOut, x: -200 }}
+				out:fly={{ duration: 150, easing: cubicInOut, x: 200 }}
+				class="text-xl"
+			>
+				{hobby}
+			</div>
+		{/key}
+	</div>
+	<button>Get in touch</button>
+</section>
+
+{#if !scrollY || scrollY === 0}
+	<div
+		transition:fade
+		class="fixed right-0 bottom-4 left-0 flex items-center justify-center"
+	>
+		<Chevron />
+	</div>
+{/if}
+
+<section id="contact">
+	<Contact />
+</section>

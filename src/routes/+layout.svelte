@@ -10,7 +10,6 @@
 	import { dev } from '$app/environment'
 
 	let { data, children } = $props()
-	const { stars, forks } = data
 
 	onMount(() => {
 		if (!dev) {
@@ -25,4 +24,4 @@
 <main class="flex-1">
 	{@render children()}
 </main>
-<Footer {stars} {forks} />
+<Footer {data} />
