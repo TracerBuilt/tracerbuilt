@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition'
 	import { cubicInOut } from 'svelte/easing'
+
+	let { class: class_name = '', ...attributes }: { class?: string } = $props()
 </script>
 
 <svg
@@ -13,9 +15,11 @@
 	viewBox="0 0 407.437 407.437"
 	style="enable-background:new 0 0 407.437 407.437;"
 	xml:space="preserve"
+	fill="currentcolor"
 	in:fade={{ duration: 1600, delay: 2000, easing: cubicInOut }}
 	out:fade={{ duration: 200, easing: cubicInOut }}
-	class="w-12 animate-pulse fill-grey-9"
+	class={`w-12 animate-pulse ${class_name}`}
+	{...attributes}
 >
 	<g>
 		<polygon
