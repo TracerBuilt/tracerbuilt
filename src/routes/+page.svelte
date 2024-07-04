@@ -1,11 +1,10 @@
 <script lang="ts">
 	import Contact from './contact/+page.svelte'
 	import Chevron from '$lib/components/Chevron.svelte'
-	import { fade, fly, slide } from 'svelte/transition'
-	import { onMount } from 'svelte'
+	import { fade, fly } from 'svelte/transition'
 	import { cubicInOut } from 'svelte/easing'
 
-	let scrollY: number
+	let scrollY: number | undefined = $state()
 
 	let hobbies = [
 		'Camper',
@@ -15,14 +14,12 @@
 		'Dog leash follower'
 	]
 
-	let hobby_index = -1
-	let hobby = 'Camper'
+	let hobby_index = $state(0)
+	let hobby = $derived(hobbies[hobby_index])
 
-	onMount(() => {
+	$effect(() => {
 		setInterval(() => {
 			hobby_index >= hobbies.length - 1 ? (hobby_index = 0) : (hobby_index += 1)
-			hobby = hobbies[hobby_index]
-			console.log('index', hobby_index)
 		}, 3000)
 	})
 </script>
@@ -53,10 +50,7 @@
 		property="twitter:image"
 		content="https://tracerbuilt.dev/images/home.jpeg"
 	/>
-	<meta
-		property="twitter:image:alt"
-		content={`The front page of my portfolio website, with white and gradient text on a dark background that says: "Hey, I'm Tyler I build cool stuff for the web"kand a gradient double triangle in the corner.`}
-	/>
+	<meta property="twitter:image:alt" content={``} />
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:site" content="@Tracer_Built" />
 </svelte:head>

@@ -77,47 +77,46 @@
 	}
 
 	@keyframes grow {
-
 		50% {
 			transform: scale(1.025) translateY(-1.25%);
 		}
-
 	}
 
 	@keyframes wiggle {
-		wiggle: {
 
-			0%,
-			100%: {
-				transform: rotate(-3deg) scale(1.1);
-			}
+		0%,
+		100% {
+			transform: rotate(-3deg) scale(1.1);
+		}
 
-			50%: {
-				transform: rotate(3deg) scale(1.1);
-			}
+		50% {
+			transform: rotate(3deg) scale(1.1);
 		}
 	}
 
 	@keyframes letter-bounce {
-		0%: {
+		0% {
 			bottom: 0;
 		}
 
-		30%: {
+		30% {
 			bottom: 0.15em;
+			transform: scale(1.1);
 		}
 
-		60%: {
+		60% {
 			bottom: -0.05em;
+			transform: scale(0.95);
 		}
 
-		100%: {
+		100% {
 			bottom: 0;
+			transform: scale(1);
 		}
 	}
 
 	@keyframes move-bg {
-		to: {
+		to {
 			background-position: -400% 0;
 		}
 	}

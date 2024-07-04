@@ -32,16 +32,14 @@
 	>
 		<div class="flex gap-2 sm:gap-4">
 			{#each routes as route, i}
-				<div
-					class="group text-grey-8 dark:text-grey-4 dark:hover:text-grey-2 dark:active:text-grey-0 hover:text-grey-10 active:text-grey-12 inline-block font-medium ease-in-out"
+				<a
+					href={route.path}
+					class="group inline-block text-base font-medium text-gray-700 ease-in-out hover:text-gray-800 active:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 dark:active:text-gray-50"
+					>{#each route.text as letter, j}<span
+							class="group-hover:animate-letter-bounce relative inline-block ease-in-out"
+							style:animation-delay={`${j / 20}s`}>{letter}</span
+						>{/each}</a
 				>
-					<a href={route.path} class=""
-						>{#each route.text as letter, j}<span
-								class="group-hover:animate-letter-bounce relative ease-in-out"
-								style:animation-delay={`${j / 20}s`}>{letter}</span
-							>{/each}</a
-					>
-				</div>
 			{/each}
 		</div>
 		<div class="relative top-0.5 flex items-baseline gap-2 sm:gap-4">
