@@ -22,9 +22,9 @@
 		"@fontsource-variable/eb-garamond": "^5.0.19",
 		"@fontsource-variable/jetbrains-mono": "^5.0.21",
 		"@fontsource-variable/oswald": "^5.0.20",
-		"@playwright/test": "^1.45.0",
-		"@sveltejs/adapter-cloudflare": "^4.5.0",
-		"@sveltejs/kit": "^2.5.17",
+		"@playwright/test": "^1.45.1",
+		"@sveltejs/adapter-cloudflare": "^4.6.0",
+		"@sveltejs/kit": "^2.5.18",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
 		"@tailwindcss/vite": "4.0.0-alpha.16",
 		"@types/prismjs": "^1.26.4",
@@ -39,21 +39,21 @@
 		"prettier-plugin-svelte": "^3.2.5",
 		"prettier-plugin-tailwindcss": "^0.6.5",
 		"prismjs": "^1.29.0",
-		"svelte": "5.0.0-next.166",
+		"svelte": "5.0.0-next.174",
 		"svelte-check": "^3.8.4",
 		"svelte-preprocess": "^6.0.1",
 		"tailwindcss": "4.0.0-alpha.16",
 		"tailwindcss-opentype": "^1.1.0",
 		"tslib": "^2.6.3",
-		"typescript": "^5.5.2",
-		"typescript-eslint": "^7.14.1",
+		"typescript": "^5.5.3",
+		"typescript-eslint": "^7.15.0",
 		"typescript-svelte-plugin": "^0.3.39",
-		"vite": "^5.3.2",
+		"vite": "^5.3.3",
 		"vitest": "^1.6.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"posthog-js": "^1.142.1"
+		"posthog-js": "^1.144.1"
 	},
 	"packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
