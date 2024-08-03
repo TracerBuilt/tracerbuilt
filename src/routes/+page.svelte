@@ -1,8 +1,10 @@
 <script lang="ts">
-	import Contact from './contact/+page.svelte'
-	import Chevron from '$lib/components/Chevron.svelte'
-	import { fade, fly } from 'svelte/transition'
 	import { cubicInOut } from 'svelte/easing'
+	import { fade, fly } from 'svelte/transition'
+
+	import Chevron from '$lib/components/Chevron.svelte'
+
+	import Contact from './contact/+page.svelte'
 
 	let scrollY: number | undefined = $state()
 

@@ -1,11 +1,12 @@
-import { error } from '@sveltejs/kit'
 import type { LayoutLoad } from './$types'
+
+import { error } from '@sveltejs/kit'
 
 const url = 'https://api.github.com/repos/TracerBuilt/tracerbuilt'
 
 export const prerender = true
 
-export const load: LayoutLoad = async ({ fetch, params }) => {
+export const load: LayoutLoad = async ({ fetch }) => {
 	const data = await fetch(url, {
 		headers: { 'Content-Type': 'application/json' }
 	})

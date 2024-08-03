@@ -1,13 +1,17 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
+
+	import { dev } from '$app/environment'
+
 	import '@fontsource-variable/eb-garamond'
 	import '@fontsource-variable/oswald'
 	import '@fontsource-variable/jetbrains-mono'
-	import Header from './Header.svelte'
-	import Footer from './Footer.svelte'
 	import '../app.css'
+
 	import posthog from 'posthog-js'
-	import { onMount } from 'svelte'
-	import { dev } from '$app/environment'
+
+	import Footer from './Footer.svelte'
+	import Header from './Header.svelte'
 
 	let { data, children } = $props()
 
