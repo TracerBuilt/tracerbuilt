@@ -26,13 +26,13 @@
 <div class="relative h-full min-h-screen w-full">
 	<div class="pointer-events-none absolute inset-0 z-0 flex justify-end select-none">
 		<enhanced:img
-			class="fade-bottom max-h-screen w-auto max-w-screen opacity-15 md:opacity-50"
+			class="fade-bottom mt-12 max-h-screen w-auto max-w-screen opacity-15 md:opacity-50"
 			src="./headshot.png"
 			alt="A headshot of a moderately attractive, mustachioed man."
 		/>
 	</div>
 	<div class="mx-4 flex min-h-screen flex-col">
-		<h1 class="font-casl-5 mt-6 text-4xl">Tyler Ward</h1>
+		<h1 class="font-casl-5 mt-2 text-4xl">Tyler Ward</h1>
 		<h3 class="mt-auto text-2xl">Full-Stack Developer</h3>
 		<div class="relative mb-16 h-10 overflow-hidden">
 			{#key currentHobby}
