@@ -6,7 +6,8 @@
 		'Builder of cool things',
 		'Reader of books',
 		'Connoisseur of camping',
-		'Writer of poetry'
+		'Writer of poetry',
+		'Bringer of old-man vibes'
 	]
 	let currentHobbyIndex = $state(0)
 	let currentHobby = $derived(hobbies[currentHobbyIndex])
